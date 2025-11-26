@@ -1,0 +1,12 @@
+Interface,Connects
+A1 Interface,"Non-RT RIC, Near-RT RIC"
+O1 Interface,"SMO, Near-RT RIC, O-CU, O-DU, O-RU"
+O2 Interface,"SMO, O-Cloud"
+E2 Interface,"Near-RT RIC, O-CU, O-DU"
+Y1 Interface,Near-RT RIC
+R1 Interface,"Non-RT RIC, External Components"
+E1 Interface,O-CU
+F1 Interface,"O-CU, O-DU"
+Airlink,"O-RU, UE"
+External Interfaces,"External Components, SMO"
+Fronthaul Interface,"O-DU, O-RU"

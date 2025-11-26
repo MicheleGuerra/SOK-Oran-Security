@@ -1,0 +1,657 @@
+Risk ID,Threat Key,Risk Description,Impact Description,CIA,Severity Level,Likelihood Level,Applied factors,Rationale,Considered Assumptions,Risk Score
+T-O-RAN-01(NEAR RT RIC),T-O-RAN-01,"An attacker exploits insecure designs or lack of adoption of security controls (e.g. hardening) in O-RAN components causing:
+ - Loss of service
+ - Privacy issues
+ - Performance issues in the system in O-RAN components","Unauthenticated/unauthorized access of the O_RAN component leads to compromised performance and/or function/service, lateral attack towards other O-RAN system component(s) from inside, and loss/stolen/tampering of sensitive data","C, I, A",High,High,"• Exposure (High): A1, O1, E2, xApps, rApps
+ • Adverse impacts (High)","O-Cloud security hardening requirements have not been specified yet and it is unclear whether the industry practices sufficiently cover the threats outlined.
+ 
+ O-RAN Alliance has specified security for O-RAN interfaces at the transport layers thereby mitigating access to O-RAN functions through the interfaces. The O-RAN Alliance has not yet specified security for protecting the platforms that host the O-RAN functions from physical or remote access.",,High
+T-O-RAN-01 (Non RT RIC + SMO),T-O-RAN-01,"An attacker exploits insecure designs or lack of adoption of security controls (e.g. hardening) in O-RAN components causing:
+ - Loss of service
+ - Privacy issues
+ - Performance issues in the system in O-RAN components","Unauthenticated/unauthorized access of the O_RAN component leads to compromised performance and/or function/service, lateral attack towards other O-RAN system component(s) from inside, and loss/stolen/tampering of sensitive data","C, I, A",High,High,"• Exposure (High): A1, O1, O2, rApps
+ • Adverse impacts (High)","O-Cloud security hardening requirements have not been specified yet and it is unclear whether the industry practices sufficiently cover the threats outlined.
+ 
+ O-RAN Alliance has specified security for O-RAN interfaces at the transport layers thereby mitigating access to O-RAN functions through the interfaces. The O-RAN Alliance has not yet specified security for protecting the platforms that host the O-RAN functions from physical or remote access.",,High
+T-O-RAN-01 (O-CU),T-O-RAN-01,"An attacker exploits insecure designs or lack of adoption of security controls (e.g. hardening) in O-RAN components causing:
+ - Loss of service
+ - Privacy issues
+ - Performance issues in the system in O-RAN components","Unauthenticated/unauthorized access of the O_RAN component leads to compromised performance and/or function/service, lateral attack towards other O-RAN system component(s) from inside, and loss/stolen/tampering of sensitive data","C, I, A",High,High,"• Exposure (High): O1, E2, administration interfaces
+ • Adverse impacts (High)","O-Cloud security hardening requirements have not been specified yet and it is unclear whether the industry practices sufficiently cover the threats outlined.
+ 
+ O-RAN Alliance has specified security for O-RAN interfaces at the transport layers thereby mitigating access to O-RAN functions through the interfaces. The O-RAN Alliance has not yet specified security for protecting the platforms that host the O-RAN functions from physical or remote access.",,High
+T-O-RAN-01 (O-DU),T-O-RAN-01,"An attacker exploits insecure designs or lack of adoption of security controls (e.g. hardening) in O-RAN components causing:
+ - Loss of service
+ - Privacy issues
+ - Performance issues in the system in O-RAN components","Unauthenticated/unauthorized access of the O_RAN component leads to compromised performance and/or function/service, lateral attack towards other O-RAN system component(s) from inside, and loss/stolen/tampering of sensitive data","C, I, A",High,High,"• Exposure (High): E2, O1, FH
+ • Adverse impacts (High)","O-Cloud security hardening requirements have not been specified yet and it is unclear whether the industry practices sufficiently cover the threats outlined.
+ 
+ O-RAN Alliance has specified security for O-RAN interfaces at the transport layers thereby mitigating access to O-RAN functions through the interfaces. The O-RAN Alliance has not yet specified security for protecting the platforms that host the O-RAN functions from physical or remote access.",,High
+T-O-RAN-01 (O-RU),T-O-RAN-01,"An attacker exploits insecure designs or lack of adoption of security controls (e.g. hardening) in O-RAN components causing:
+ - Loss of service
+ - Privacy issues
+ - Performance issues in the system in O-RAN components","Unauthenticated/unauthorized access of the O_RAN component leads to compromised performance and/or function/service, lateral attack towards other O-RAN system component(s) from inside, and loss/stolen/tampering of sensitive data","C, I, A",High,High,"• Exposure (High): FH, O1, physical
+ • Adverse impacts (High)","O-Cloud security hardening requirements have not been specified yet and it is unclear whether the industry practices sufficiently cover the threats outlined.
+ 
+ O-RAN Alliance has specified security for O-RAN interfaces at the transport layers thereby mitigating access to O-RAN functions through the interfaces. The O-RAN Alliance has not yet specified security for protecting the platforms that host the O-RAN functions from physical or remote access.",,High
+T-O-RAN-02,T-O-RAN-02,"An attacker exploits misconfigured or poorly configured O-RAN components causing:
+ - Loss of service
+ - Privacy issues
+ - Performance issues in the system","Unauthenticated/unauthorized access of the O_RAN component leads to compromised performance and/or function/service, lateral attack towards other O-RAN system component(s) from inside, and loss/stolen/tampering of sensitive data","C, I, A",High,High,"• Threat event initiation (High)
+ • Adverse impacts (High)",O-Cloud security hardening requirements have not been specified yet and it is unclear whether the industry practices sufficiently cover the threats outlined.,,High
+T-O-RAN-03,T-O-RAN-03,"Attacks from the internet exploit weak authentication and access control to penetrate O-RAN network boundary, causing:
+ - Flooding of the network - loss of service, performance issues
+ - Unauthorized access to ORAN components","Denial of service for component access and/or function/service offered;
+ Unauthenticated/unauthorized access of the O_RAN component leads to compromised performance and/or function/service, lateral attack towards other O-RAN system component(s) from inside, and loss/stolen/tampering of sensitive data;","C, I, A",High,Medium,"• Threat event initiation (High)
+ • Adverse impacts (Medium)","O-RAN Alliance has not specified yet any xApp security measures around the Onboarding onto SMO and deployment onto Near RT-RIC, authentication and access control, secure configuration, etc. Further, there is no testing framework in place for xApps yet. This attack to be performed requires multiple steps to be achieved by an attacker.",The O-RAN network elements should not be exposed to untrusted/ internet end points without network access control.,High
+T-O-RAN-04,T-O-RAN-04,"An attacker attempts to flooding the airlink signal (legitimate communications) through IoT devices causing:
+ - Loss of service",Denial of service for component access and/or function/service offered,A,Medium,High,"• Threat event initiation (High)
+ • Adverse impacts (High)",O-RAN Alliance has not specified yet any security measures on flooding attacks through IoT devices.,,High
+T-O-RAN-05,T-O-RAN-05,"An attacker penetrates and compromises the O-RAN system through the open O-RAN’s Fronthaul, O1, O2, A1, and E2","Data tampering and information disclosure;
+ Denial of service from within for component access and/or function/service offered;
+ Unauthenticated/unauthorized access of the O_RAN component leads to compromised performance and/or function/service, lateral attack towards other O-RAN system component(s) from inside, and loss/stolen/tampering of sensitive data;","C, I, A",High,Medium,"• Threat event initiation (Medium)
+ • Adverse impacts (Medium)","Existing controls are in place (moderately satisfactory), Malicious user needs to have direct (physical) access to the target system",,High
+T-O-RAN-06,T-O-RAN-06,An attacker exploits insufficient/improper mechanisms for authentication and authorization to compromise O-RAN components,"Unauthenticated/unauthorized access of the O_RAN component leads to compromised performance and/or function/service, lateral attack towards other O-RAN system component(s) from inside, and loss/stolen/tampering of sensitive data","C, I, A",High,High,"• Threat event initiation (High)
+ • Adverse impacts (Medium)","Existing controls are in place (moderately satisfactory), Attack can be launched from the internet or untrusted network",Authentication procedures are in place,High
+T-O-RAN-07,T-O-RAN-07,An attacker compromises O-RAN monitoring mechanisms and log files integrity and availability,"Compromise of availability and integrity of security event log files could conduct to delays, wrong audit results, delays in security restoration, threats persistence.","I, A",Medium,Medium,"• Threat event initiation (Medium)
+ • Adverse impacts (Medium)","Existing controls are in place (moderately satisfactory), Malicious user needs to have administrative or elevated privileges in the target system. It is a likely scenario after initial compromise of network elements.","Authentication procedures , patch management regular programmed update, vulnerability handling/regular scanning, SBOM are in place",Medium
+T-O-RAN-08,T-O-RAN-08,"An attacker compromises O-RAN data integrity, confidentiality and traceability","An attacker could, in such case, data tampering, information disclosure, spoofing identity, elevation of privilege, etc.","C, I",Medium,Medium,"• Threat event initiation (Medium)
+ • Adverse impacts (Medium)",Existing controls are in place (moderately satisfactory). Likely scenario after initial compromise of network elements with local data storage.,"Protection at rest (e.g. HSM) is in place (operator decision),",Medium
+T-O-RAN-09,T-O-RAN-09,An attacker compromises O-RAN components integrity and availability,"An attacker could, in such case, cause denial-of-service, data tampering, information disclosure, spoofing identity, etc.","I, A",High,Medium,"• Threat event initiation (Medium)
+ • Adverse impacts (Medium)","Existing controls are in place (moderately satisfactory), Malicious user needs to have direct access to the target system",,High
+T-ORAN-10,T-ORAN-10,"A successful attack could:
+ -compromise confidentiality, integrity and availability due to the prolonged undetected presence of an attacker in the network","confidentiality, integrity, availability",CIA,High,High,"• Impact on confidentiality, integrity and availability (High)
+ • Threat event initiation (High)","- Impact on confidentiality, integrity, and availability (High): fragmented logs lead to undetected breaches, tampering, and delayed responses, causing significant data loss, integrity issues, and system disruptions.
+ - Threat event initiation (High): Adversary behaviour generally goes undiscovered.",,High
+T-FRHAUL-01,T-FRHAUL-01,An attacker penetrates O-DU and beyond through O-RU (bidding-down attack),Data tampering and information disclosure;,"C, I",High,Medium,"• Threat event initiation (Medium)
+ • Adverse impacts (Medium)
+ • Exposure (Medium)","System has an amount of exposed interfaces: multiple O-DU, multiple O-RU, FH interface. It is a possible attack, however needs physical access and sophistication to execute",,High
+T-FRHAUL-01A,T-FRHAUL-01A,An attacker penetrates O-DU and beyond through O-RU (bidding-down attack),Spoofing,"C, I",High,Medium,"• Threat event initiation (Medium)
+ • Adverse impacts (Medium)
+ • Exposure (Medium)","System has an amount of exposed interfaces: multiple O-DU, multiple O-RU, FH interface. It is a possible attack, however needs physical access and sophistication to execute",,High
+T-FRHAUL-02,T-FRHAUL-02,Unauthorized access to the Open Front Haul Ethernet L1 physical layer interface (cables and connections),It provides a means to launch attacks on the confidentiality of the Open Front Haul system.,C,High,Low,"• Threat event initiation (Low)
+ • Adverse impacts (High)","It is a possible attack, however needs physical access and sophistication to execute",,Medium
+T-FRHAUL-03,T-FRHAUL-03,Unauthorized access to the Open Front Haul Ethernet L1 physical layer interface (cables and connections),It provides a means to launch attacks on the availability of the Open Front Haul system.,A,High,Low,"• Threat event initiation (Low)
+ • Adverse impacts (High)","It is a possible attack, however needs physical access and sophistication to execute",,Medium
+T-MPLANE-01,T-MPLANE-01,An attacker attempts to intercept the Fronthaul (MITM) over M Plane to obtain protected information,Passive wiretapping,C,Medium,Low,"• Threat event initiation (Low)
+ • Adverse impacts (Medium)","It is a possible attack, however needs physical access and sophistication to execute","TLS with PKI is supported, it is up to MNO, the likelihood is low provided that MNOs use TLS over the M-Plane",Low
+T-MPLANE-02,T-MPLANE-02,An attacker attempts to intercept the Fronthaul (MITM) over M Plane to alter m-plane data,Intercepting and modifying of the M plane messages.,I,Medium,Low,"• Threat event initiation (Low)
+ • Adverse impacts (Medium)","It is a possible attack, however needs physical access and sophistication to execute","TLS with PKI is supported, it is up to MNO, the likelihood is low provided that MNOs use TLS over the M-Plane",Low
+T-MPLANE-03,T-MPLANE-03,An attacker attempts to intercept the Fronthaul (MITM) over M Plane to disrupt services,Denial of service,A,Medium,Low,"• Threat event initiation (Low)
+ • Adverse impacts (Medium)","It is a possible attack, however needs physical access and sophistication to execute","TLS with PKI is supported, it is up to MNO, the likelihood is low provided that MNOs use TLS over the M-Plane",Low
+T-SPLANE-01-C1 (one O-RU scenario),T-SPLANE-01,"DoS attack on an O-DU acting as master to distribute network timing toward O-RU based on point-to-point connection in LLS-C1. In this scenario, only one O-RU is connected to O-DU, therefore only that O-RU is affected.",This attack may cause performance degradation or interruption of services to only one O-RU that rely on accurate time from the affected O-DU. The severity level is consequently 'Low'.,A,Low,Low,"• Exposure (Low)
+ • Threat event initiation (Medium)","Slightly exposed to external systems: one O-RU. It is a possible attack, however needs physical access and sophistication to execute",Access control on the CUSM-Plane that mitigates unauthorized access by an insider are in place. 802.1x protocol is supported it can reduce the likelihood of this attack.,Low
+T-SPLANE-01-C1 (multiple O-RUs scenario),T-SPLANE-01,"DoS attack on an O-DU acting as master to distribute network timing toward O-RU based on point-to-point connection in LLS-C1. In this scenario, multiple O-RUs are connected to O-DU, therefore those O-RUs are affected.",This attack may cause performance degradation or interruption of services to all the RUs that rely on accurate time from the affected O-DU. The severity level is consequently 'Medium'.,A,Medium,Medium,"• Exposure (Medium)
+ • Threat event initiation (Medium)","System has a medium amount of exposed interfaces: multiple O-RUs. It is possible attack, however needs physical access and sophistication to execute",,Medium
+T-SPLANE-01-C2,T-SPLANE-01,DoS attack on an O-DU acting as master to distribute network timing toward O-RU in LLS-C2. One or more Ethernet switches are allowed between the central site (hosting O-DUs) and the remote sites (hosting O-RUs).,"This attack may cause performance degradation or interruption of services to all the RUs that rely on accurate time from the affected O-DU. In this configuration, a neighbor O-DU could act a backup and play the role of a master to distribute network timing to all the RUs belonging to the affected O-DU by reconfiguring the network of switches. The severity level is consequently 'Low'.",A,Low,Medium,"• Exposure (Medium)
+ • Threat event initiation (Medium)","System has a medium amount of exposed interfaces. It is a possible attack, however needs physical access and sophistication to execute",Access control on the CUSM-Plane that mitigates unauthorized access by an insider are in place. 802.1x protocol is supported it can reduce the likelihood of this attack.,Low
+T-SPLANE-01-C3,T-SPLANE-01,DoS attack against a Master clock in the LLS-C3 configuration,"In this configuration, the frequency and timing distribution is made by the fronthaul network (not by O-DU). DoS attack against a master clock may cause performance degradation or interruption of services to all the RUs and DUs that rely on accurate time from the affected master clock in the fronthaul network. The severity level is consequently 'High'.",A,High,Medium,"• Exposure (Medium)
+ • Threat event initiation (Medium)","System has a medium amount of exposed interfaces. It is a possible attack, however needs physical access and sophistication to execute",,High
+T-SPLANE-01-C4,T-SPLANE-01,DoS attack against a Master clock in the LLS-C4 configuration,"In this configuration, the time source could be locally embedded in the RU itself. DoS attack in the time source may cause performance degradation or interruption of services to only one O-RU where the time source is embedded. The severity level is consequently 'Low'.",A,Low,Low,"• Exposure (Low)
+ • Threat event initiation (Medium)","Slightly exposed to external systems: one O-RU. It is a possible attack, however needs physical access and sophistication to execute",Access control on the CUSM-Plane that mitigates unauthorized access by an insider are in place. 802.1x protocol is supported it can reduce the likelihood of this attack.,Low
+T-SPLANE-02,T-SPLANE-02,Impersonation of a Master clock (Spoofing) within a PTP network with a fake ANNOUNCE messages,"Degradation in the accuracy of time may cause DoS to applications on all the RUs that rely on accurate time, potentially bringing down the cell.
+ A cell outage caused by misaligned time, may further impact performance in connected neighboring cells.",A,High,Low,"• Threat event initiation (Medium)
+ • Adverse impacts (Low)","Existing controls are in place to prevent, or at least significantly impede, the vulnerability from being exercised. It is a possible attack, however needs physical access and sophistication to execute",Access control on the CUSM-Plane that mitigates unauthorized access by an insider are in place. 802.1x protocol is supported it can reduce the likelihood of this attack.,Medium
+T-SPLANE-03,T-SPLANE-03,A Rogue PTP Instance wanting to be a Grand Master by sending manipulated/malicious ANNOUNCE messages declaring him to be the best clock in the network,"Degradation in the accuracy of time may cause DoS to applications on all the RUs that rely on accurate time, potentially bringing down the cell.
+ A cell outage caused by misaligned time, may further impact performance in connected neighboring cells.",A,High,Low,"• Threat event initiation (Medium)
+ • Adverse impacts (Low)","Existing controls are in place to prevent, or at least significantly impede, the vulnerability from being exercised. It is a possible attack, however needs physical access and sophistication to execute",Access control on the CUSM-Plane that mitigates unauthorized access by an insider are in place. 802.1x protocol is supported it can reduce the likelihood of this attack.,Medium
+T-SPLANE-04,T-SPLANE-04,Selective interception and removal of PTP timing packets,"Clock degradation in attacked nodes. Removing all packets or random packets may push the clocks in attacked nodes into free running mode.
+ Degradation in the accuracy of time may cause DoS to applications on all the RUs that rely on accurate time, potentially bringing down the cell.
+ A cell outage caused by misaligned time, may further impact performance in connected neighboring cells.",A,High,Low,"• Threat event initiation (Medium)
+ • Adverse impacts (Low)","Existing controls are in place to prevent, or at least significantly impede, the vulnerability from being exercised. It is a possible attack, however needs physical access and sophistication to execute",Access control on the CUSM-Plane that mitigates unauthorized access by an insider are in place. 802.1x protocol is supported it can reduce the likelihood of this attack.,Medium
+T-SPLANE-05,T-SPLANE-05,Packet delay manipulation attack,"Degradation in the accuracy of time may cause DoS to applications on all the RUs that rely on accurate time, potentially bringing down the cell.
+ A cell outage caused by misaligned time, may further impact performance in connected neighboring cells.",A,High,Medium,"• Threat event initiation (Medium)
+ • Adverse impacts (Medium)","Existing controls are in place to prevent (moderately satisfactory). It is a possible attack, however needs physical access and sophistication to execute",802.1x protocol is supported it can reduce the likelihood of this attack.,High
+T-CPLANE-01,T-CPLANE-01,Spoofing of DL C-plane messages,"The lack of authentication could allow an adversary to inject own DL C-plane messages that falsely claiming to be from the associated O-DU. 
+ As a result, it would block the O-RU to process the corresponding U-Plane packets, leading to temporarily DoS. (dropping the entire DL C-plane messages would achieve same goal)",A,Medium,Low,"• Threat event initiation (Medium)
+ • Adverse impacts (Low)","Existing controls are in place to prevent, or at least significantly impede, the vulnerability from being exercised. It is a possible attack, however needs physical access and sophistication to execute","802.1x at the ethernet level ensures authentication and authorization for communication over FH interface, not sure that this control reduce the risk of spoofing of c-plane at a low level. Mitigations related to monitoring and configuration of network nodes are in place",Low
+T-CPLANE-02,T-CPLANE-02,Spoofing of UL C-plane messages,"The lack of authentication could allow an adversary to inject own UL C-plane messages that falsely claiming to be from the associated O-DU.
+ As a result, temporarily limited cell performance (or even DoS) on cells served by the O-RU and in addition a consequential threat to all O-RUs parented to that O-DU might exist. (dropping the entire UL C-plane messages would achieve same goal)",A,Medium,Low,"• Threat event initiation (Medium)
+ • Adverse impacts (Low)","Existing controls are in place to prevent, or at least significantly impede, the vulnerability from being exercised. It is a possible attack, however, needs physical access and sophistication to execute","802.1x at the ethernet level ensures authentication and authorization for communication over FH interface, not sure that this control reduce the risk of spoofing of c-plane at a low level. Mitigations related to monitoring and configuration of network nodes are in place",Low
+T-UPLANE-01,T-UPLANE-01,An attacker attempts to intercept the Fronthaul (MITM) over U Plane to obtain user data (PDCP protocol is used),"For the transported U-Plane data an attacker could potentially do threats, such as passive wiretapping, but would need to break PDCP Security prior to any content access.",C,Medium,Low,"• Threat event initiation (Low)
+ • Adverse impacts (Medium)","Existing controls are in place to prevent, or at least significantly impede, the vulnerability from being exercised. It is a possible attack, however, needs physical access and sophistication to execute",802.1x protocol is supported it can reduce the likelihood of this attack.,Low
+T-UPLANE-02,T-UPLANE-02,An attacker attempts to intercept the Fronthaul (MITM) over U Plane to modify u-plane data (PDCP protocol is used),"For the transported U-Plane data an attacker could potentially do threats, such as passive wiretapping, but would need to break PDCP Security prior to any content access.",I,Medium,Low,"• Threat event initiation (Low)
+ • Adverse impacts (Medium)","Existing controls are in place to prevent, or at least significantly impede, the vulnerability from being exercised. It is a possible attack, however, needs physical access and sophistication to execute",802.1x protocol is supported it can reduce the likelihood of this attack.,Low
+T-UPLANE-03,T-UPLANE-03,An attacker attempts to intercept the Fronthaul (MITM) over U Plane to disrupt services (PDCP protocol is used),"For the transported U-Plane data an attacker could potentially do threats, such as passive wiretapping, but would need to break PDCP Security prior to any content access.",A,Medium,Low,"• Threat event initiation (Low)
+ • Adverse impacts (Medium)","Existing controls are in place to prevent, or at least significantly impede, the vulnerability from being exercised. It is a possible attack, however, needs physical access and sophistication to execute",802.1x protocol is supported it can reduce the likelihood of this attack.,Low
+T-UPLANE-04,T-UPLANE-04,Spoofing and unauthorized access of U-Plane data packets,"An attacker could degrade service quality, disrupt legitimate data flow, and potentially cause a DoS.",NA,Medium,Low,"• Threat event initiation (Low)
+ • Adverse impacts (Medium)","Existing controls are in place to prevent, or at least significantly impede, the vulnerability from being exercised. It is a possible attack, however, needs physical access and sophistication to execute",802.1x protocol is supported it can reduce the likelihood of this attack.,Low
+T-ORU-01-a,T-ORU-01,An attacker stands up a rogue O-RU (standalone) - a false base station,This opens the door to subscriber’s identity interception/disclosure and unauthorized user tracking attacks (privacy breach).,"C, I",High,Medium,"• Threat event initiation (Medium)
+ • Adverse impacts (Medium)","Existing controls are in place to prevent (moderately satisfactory). It is a possible attack, however needs physical access and sophistication to execute","Security measures already defined by 3GPP, monitoring/detection mechanisms of a rogue ORU are in place",High
+T-ORU-01-b,T-ORU-01,An attacker stands up a rogue O-RU attacking O-DU and beyond (core network),"It provides a means to launch attacks on the availability, integrity, and confidentiality of the Open Front Haul system, ODUs and beyond in the core network.","C, I",High,Low,"• Threat event initiation (Medium)
+ • Adverse impacts (Low)","Existing controls are in place to prevent, or at least significantly impede, the vulnerability from being exercised. It is a possible attack, however needs physical access and sophistication to execute",802.1x protocol is supported it can reduce the likelihood of this attack.,Medium
+T-NEAR-RT-01,T-NEAR-RT-01,"Malicious xApps can exploit UE identification, track UE location and change UE priority","An xApp can receive order via A1 to control a certain UE and if a malfunctioning xApp receives an order to prioritize this UE, then the owner of the malfunctioning xApp knows a VIP that they want to track in a certain area. With this command exposure, the attacker can obtain a rough location of a very important person and change the order from prioritize to deprioritize for a UE;
+ Interception of UE identifier","C, I",High,High,"• Threat event initiation (High)
+ • Adverse impacts (High)
+ • Exposure (High)","O-RAN Alliance has not specified yet any xApp security measures around the Onboarding onto SMO and deployment onto Near RT-RIC. Further, there is no testing framework in place for xApps yet.",,High
+T-NEAR-RT-02,T-NEAR-RT-02,Risk of a malicious xApp on Near-RT RIC to obtain protected information,"Deployment of malicious xApps may allow unauthorized access to E2 Nodes, abuse of radio network information, or exploit UE identification and location.","C, I",High,High,"• Threat event initiation (High)
+ • Exposure (High)","O-RAN Alliance has not specified yet any xApp security measures around the Onboarding onto SMO and deployment onto Near RT-RIC. Further, there is no testing framework in place for xApps yet.",,High
+T-NEAR-RT-02A,T-NEAR-RT-02,Risk of a malicious xApp on Near-RT RIC impacting service availability,Deployment of malicious xApps may allow impacting service or exploit slice priority.,A,High,High,"• Threat event initiation (High)
+ • Adverse impacts (High)","O-RAN Alliance has not specified yet any xApp security measures around the Onboarding onto SMO and deployment onto Near RT-RIC. Further, there is no testing framework in place for xApps yet.",,High
+T-NEAR-RT-03,T-NEAR-RT-03,"Near-RT RIC APIs can be compromised and manipulated due to lack, incorrect or weak authentication mechanism",Near-RT RIC data around services and UEs can be eavesdropped.,C,High,High,"• Threat event initiation (High)
+ • Exposure (High)",O-RAN Alliance has not specified yet any Near-RT RIC APIs measures.,,High
+T-NEAR-RT-03A,T-NEAR-RT-03,"Near-RT RIC APIs can be compromised and manipulated due to lack, incorrect or weak authentication mechanism",Unauthenticated APIs can be manipulated causing services disruptions in RAN network,A,High,High,"• Threat event initiation (High)
+ • Adverse impacts (High)",O-RAN Alliance has not specified yet any Near-RT RIC APIs measures.,,High
+T-NEAR-RT-04,T-NEAR-RT-04,Resources and services provided by Near-RT RIC platform and xApps via APIs can be abused and/or misused,Near-RT RIC data around services and UEs can be eavesdropped by xApps without proper permissions.,C,High,High,"• Threat event initiation (High)
+ • Adverse impacts (High)
+ • Exposure (High)",O-RAN Alliance has not specified yet any Near-RT RIC APIs measures.,,High
+T-NEAR-RT-04A,T-NEAR-RT-04,Resources and services provided by Near-RT RIC platform and xApps via APIs can be abused and/or misused,Abuse of resources and misuse of services can produce disruptions and/or outages in the network.,A,High,High,"• Threat event initiation (High)
+ • Adverse impacts (High)
+ • Exposure (High)",O-RAN Alliance has not specified yet any Near-RT RIC APIs measures.,,High
+T-NEAR-RT-05,T-NEAR-RT-05,"Risk of deployment of a malicious, non-uniquely identified xApps using a trusted xAppID to access resources and services which they are not entitled to use.","theft of services, data leakage","C, I",High,High,"• Threat event initiation (High)
+ • Exposure (High)",O-RAN Alliance has not specified yet any xApp security measures around the xAppID yet.,,High
+T-NONRTRIC-01,T-NONRTRIC-01,An attacker gains access to the Non-RT RIC through the SMO to cause a denial of service or degrade the performance of the Non-RT-RIC,"Non-RT RIC would not be able to:
+ •monitor or trace the network to understand the effect of policy on performance in Near-RT RIC 
+ •update A1 policy •provide exposure and secure delivery of A1 Enrichment Information to Near-RT RIC •setup access control rules and the selection of which Enrichment Information ID (EiId) is exposed to a near-RT RIC",A,High,Medium,"• ZTA (Medium)
+ • Adverse impacts (High)",O-RAN Alliance has not specified yet any security measures around the authentication and access control to the Non RT-RIC.,,High
+T-NONRTRIC-02,T-NONRTRIC-02,An attacker gains access to the Non-RT RIC through the SMO for UE tracking,Attacker has access to sensitive data and is able to track a UE,C,High,High,"• ZTA (High)
+ • Adverse impacts (High)",O-RAN Alliance has not specified yet any security measures around the authentication and access control to the Non RT-RIC.,,High
+T-NONRTRIC-03,T-NONRTRIC-03,An attacker gains access to the Non-RT RIC through the SMO to cause Data Corruption/Modification,A malicious actor who gains unauthorized access to the Non-RT-RIC can modify policy to pass a “False Policy” to the Near-RT-RIC to degrade performance or cause an outage.,C,High,Medium,"• ZTA (Medium)
+ • Adverse impacts (High)",O-RAN Alliance has not specified yet any security measures around the authentication and access control to the Non RT-RIC.,,High
+T-xAPP-01,T-xAPP-01,An attacker exploits xApps vulnerabilities and misconfiguration to alter data transmitted over A1 or E2 interfaces.,"If attackers can find exploitable xApp, they can disrupt the offered network service and potentially take over another xApp or the whole Near-RT RIC. 
+ The actual consequences may vary. For example, an attacker may gain the ability to alter data transmitted over A1 or E2 interfaces, extract sensitive information, etc.",I,High,High,"• Threat event initiation (High)
+ • Adverse impacts (High)
+ • Exposure (High)","O-RAN Alliance has not specified yet any xApp security measures around the Onboarding onto SMO and deployment onto Near RT-RIC, authentication and access control, secure configuration, etc. Further, there is no testing framework in place for xApps yet.",,High
+T-xAPP-01A,T-xAPP-01,An attacker exploits xApps vulnerabilities and misconfiguration to extract sensitive information.,"If attackers can find exploitable xApp, they can disrupt the offered network service and potentially take over another xApp or the whole Near-RT RIC. 
+ The actual consequences may vary. For example, an attacker may gain the ability to alter data transmitted over A1 or E2 interfaces, extract sensitive information, etc.",C,High,High,"• Threat event initiation (High)
+ • Adverse impacts (High)
+ • Exposure (High)","O-RAN Alliance has not specified yet any xApp security measures around the Onboarding onto SMO and deployment onto Near RT-RIC, authentication and access control, secure configuration, etc. Further, there is no testing framework in place for xApps yet.",,High
+T-xAPP-01B,T-xAPP-01,An attacker exploits xApps vulnerabilities and misconfiguration to disrupt Near-RT RIC functions,"If attackers can find exploitable xApp, they can disrupt the offered network service and potentially take over another xApp or the whole Near-RT RIC. 
+ The actual consequences may vary. For example, an attacker may gain the ability to alter data transmitted over A1 or E2 interfaces, extract sensitive information, etc.",A,High,High,"• Threat event initiation (High)
+ • Adverse impacts (High)
+ • Exposure (High)","O-RAN Alliance has not specified yet any xApp security measures around the Onboarding onto SMO and deployment onto Near RT-RIC, authentication and access control, secure configuration, etc. Further, there is no testing framework in place for xApps yet.",,High
+T-xAPP-01C,T-xAPP-01,An attacker exploits xApps vulnerabilities and misconfiguration to gain unauthorized control over Near-RT RIC,"If attackers can find exploitable xApp, they can disrupt the offered network service and potentially take over another xApp or the whole Near-RT RIC. 
+ The actual consequences may vary. For example, an attacker may gain the ability to alter data transmitted over A1 or E2 interfaces, extract sensitive information, etc.","C, I, A",High,High,"• Threat event initiation (High)
+ • Adverse impacts (High)
+ • Exposure (High)","O-RAN Alliance has not specified yet any xApp security measures around the Onboarding onto SMO and deployment onto Near RT-RIC, authentication and access control, secure configuration, etc. Further, there is no testing framework in place for xApps yet.",,High
+T-xAPP-02,T-xAPP-02,Conflicting xApps impact O-RAN system functions to degrade performance or trigger a DoS,An attacker can utilize a malicious xApp that intentionally triggers RRM decisions conflicting with the O-gNB internal decisions to create denial of service or performance degradation.,A,High,Medium,"• Threat event initiation (Medium)
+ • Adverse impacts (High)","O-RAN Alliance has not specified yet any xApp security measures around the Onboarding onto SMO and deployment onto Near RT-RIC, authentication and access control, secure configuration, etc. Further, there is no testing framework in place for xApps yet.",,High
+T-xAPP-03,T-xAPP-03,An attacker compromises xApp isolation,"Gaining unauthorized access to the underlying system provides new opportunities to exploit vulnerabilities in other xApps or O-RAN components to intercept and spoof network traffic, to degrade services (DoS), etc.","C, I, A",High,Medium,"• Threat event initiation (Medium)
+ • Adverse impacts (High)","O-RAN Alliance has not specified yet any xApp security measures around the Onboarding onto SMO and deployment onto Near RT-RIC, authentication and access control, secure configuration, etc. Further, there is no testing framework in place for xApps yet.",,High
+T-xApp-04,T-xApp-04,False or malicious A1 policies modify behavior of xApps,"A malicious A1 policy can exploit xApp functionality to trigger a DoS, affect performance, or locate a subscriber.","I, A",High,Medium,"• Threat event initiation (Medium)
+ • Adverse impacts (High)","O-RAN Alliance has not specified yet any xApp security measures around the Onboarding onto SMO and deployment onto Near RT-RIC, authentication and access control, secure configuration, etc. Further, there is no testing framework in place for xApps yet. This attack to be performed requires multiple steps to be achieved by an attacker.",,High
+T-rAPP-01,T-rAPP-01,Conflicting rApps impact O-RAN system functions to degrade performance or trigger a DoS,rApps in the Non-RT RIC performing different functions can be provided by different vendors. This creates the risk that different rApps will take conflicting decisions to set conflicting policies. This can result in performance degradation or outage.,"C, I, A",High,Medium,"• ZTA (Medium)
+ • Adverse impacts (High)","O-RAN Alliance has not specified yet any rApp security measures around the Onboarding onto SMO and deployment onto Non RT-RIC, authentication and access control, secure configuration, etc. Further, there is no testing framework in place for rApps yet.",,High
+T-rAPP-02,T-rAPP-02,An attacker exploits rApp vulnerability for data breach or denial of service,"Vulnerabilities can potentially exist in any rApp. If attackers can find exploitable rApp, they can disrupt the offered network service and potentially take over another rApp or the non-RT RIC. The consequences may vary. For example, an attacker may gain the ability to alter data transmitted over A1 interface, extract sensitive information, etc.","C, I, A",High,Medium,"• ZTA (Medium)
+ • Adverse impacts (High)","O-RAN Alliance has not specified yet any rApp security measures around the Onboarding onto SMO and deployment onto Non RT-RIC, authentication and access control, secure configuration, etc. Further, there is no testing framework in place for rApps yet.",,High
+T-rAPP-03,T-rAPP-03,An attacker exploits rApps misconfiguration,"Security misconfiguration, such as open ports or enabled unused protocols, can potentially exist in an rApp. If attackers can find exploitable rApp, they can disrupt the offered network service and potentially take over another rApp or the whole non-RT RIC. The actual consequences may vary. For example, an attacker may gain the ability to alter data transmitted over A1 interface, extract sensitive information, etc.","C, I, A",High,Medium,"• ZTA (Medium)
+ • Adverse impacts (High)","O-RAN Alliance has not specified yet any rApp security measures around the Onboarding onto SMO and deployment onto Non RT-RIC, authentication and access control, secure configuration, etc. Further, there is no testing framework in place for rApps yet.",,High
+T-rAPP-04,T-rAPP-04,An attacker bypasses authentication and authorization,An Attacker can exploit an rApp that has weak or misconfigured authentication and authorization to gain access to the rApp and pose as a tenant.,"C, I, A",High,Medium,"• ZTA (Medium)
+ • Adverse impacts (High)","O-RAN Alliance has not specified yet any rApp security measures around the Onboarding onto SMO and deployment onto Non RT-RIC, authentication and access control, secure configuration, etc. Further, there is no testing framework in place for rApps yet.",,High
+T-rAPP-05,T-rAPP-05,An attacker deploys and exploits malicious rApp,"An untrusted source may intentionally provide a malicious rApp. A trusted source may have a backdoor intentionally inserted in the rApp. If attackers can find exploitable rApp, they can disrupt the offered network service and potentially take over another rApp or the whole Non-RT RIC. Malicious rApps could impact Non-RT RIC functions such as AI/ML model training, A1 policy management, Enrichment information management, Network Configuration Optimization in the purpose of performance degradation, DoS,","C, I, A",High,Medium,"• ZTA (Medium)
+ • Adverse impacts (High)","O-RAN Alliance has not specified yet any rApp security measures around the Onboarding onto SMO and deployment onto Non RT-RIC, authentication and access control, secure configuration, etc. Further, there is no testing framework in place for rApps yet.",,High
+T-rAPP-06,T-rAPP-06,An attacker bypasses authentication and authorization using an injection attack,"It is possible that an attacker to submit requests without prior authentication and authorization by executing an injection attack to manipulate configurations, access logs, perform remote code execution, etc.","C, I, A",High,Medium,"• ZTA (Medium)
+ • Adverse impacts (High)","O-RAN Alliance has not specified yet any rApp security measures around the Onboarding onto SMO and deployment onto Non RT-RIC, authentication and access control, secure configuration, etc. Further, there is no testing framework in place for rApps yet.",,High
+T-rAPP-07,T-rAPP-07,rApp exploits services,A malicious rApp or a trusted but compromised rApp can exploit services such as O1 services across the R1 interface,A,High,Medium,"• ZTA (Medium)
+ • Adverse impacts (High)","O-RAN Alliance has not specified yet any rApp security measures around the Onboarding onto SMO and deployment onto Non RT-RIC, authentication and access control, secure configuration, etc. Further, there is no testing framework in place for rApps yet.",,High
+T-PNF-01,T-PNF-01,An attacker compromises a PNF to launch attacks against VNFs/CNFs,"Data tampering and information disclosure;
+ 
+ Unauthenticated/unauthorized access of the O_RAN component leads to compromised performance and/or function/service, lateral attack towards other O-RAN system component(s) from inside, and loss/stolen/tampering of sensitive data;","C, I",High,Medium,"• Threat event initiation (Medium)
+ • Adverse impacts (Medium)",This is a likely attack but may need physical access to the PNF.,,High
+T-PNF-01A,T-PNF-01,An attacker compromises a PNF to launch Denial of Service attacks against VNFs/CNFs,Denial of service from within for component access and/or function/service offered,A,High,Medium,"• Threat event initiation (Medium)
+ • Adverse impacts (Medium)",This is a likely attack but may need physical access to the PNF.,,High
+T-SMO-01,T-SMO-01,An attacker can exploit the misconfigured/poorly implemented authentication mechanism on SMO functions,The data stored in the SMO may be exposed/manipulated to an attacker.,"C, I",High,High,"• ZTA (High)
+ • Threat event initiation (High)","O-RAN Alliance has not specified yet any SMO security measures around authentication, access control, secure configuration, etc.",,High
+T-SMO-02,T-SMO-02,An attacker can exploit the misconfigured/poorly implemented authorization on SMO functions,"An attacker can be able to perform certain actions, e.g. disclose O-RAN sensitive information or alter O-RAN components.","C, I, A",High,High,"• ZTA (High)
+ • Threat event initiation (High)","O-RAN Alliance has not specified yet any SMO security measures around authentication, access control, secure configuration, etc.",,High
+T-SMO-03,T-SMO-03,Overload DoS attacks at SMO,Inability to deal with such events affects availability of SMO data and functions.,A,Medium,Medium,"• ZTA (Medium)
+ • Threat event initiation (High)","O-RAN Alliance has not specified yet any SMO security measures around authentication, access control, secure configuration, etc.",,Medium
+T-OPENSRC-01,T-OPENSRC-01,Developers use SW components with known vulnerabilities and untrusted libraries that can be exploited by an attacker through a backdoor attack,"Attackers can exploit a vulnerability on the open source code and infects a hypervisor, operating system, VM or container with a malware.","C, I, A",High,High,Open-source/COTS support (High),Vulnerability handling and patch management are not yet defined by O-RAN Alliance. Several CVE have already been discovered on open source software.,,High
+T-OPENSRC-02,T-OPENSRC-02,A trusted developer intentionally inserts a backdoor into an open source code O-RAN component.,"Unauthenticated/unauthorized access of the O_RAN component leads to compromised performance and/or function/service, lateral attack towards other O-RAN system component(s) from inside, and loss/stolen/tampering of sensitive data;","C, I, A",High,Medium,Open-source/COTS support (High),Vulnerability handling and patch management are not yet defined by O-RAN Alliance. Several CVE have already been discovered on open source software.,,High
+T-PHYS-01,T-PHYS-01,An intruder into a site gains physical access to O-RAN components to cause damage or access sensitive data,"Data tampering and information disclosure;
+ Denial of service from within for component access and/or function/service offered;
+ Unauthenticated/unauthorized access of the O_RAN component leads to compromised performance and/or function/service, lateral attack towards other O-RAN system component(s) from inside, and loss/stolen/tampering of sensitive data;","C, I, A",High,Medium,Exposure (Medium),O-RAN system has many external interfaces. Different O-Cloud deployment models can be used to implement O-RAN. Several scenarios to implement O-RUs and O-DUs are supported by O-RAN.,,High
+T-PHYS-02,T-PHYS-02,An intruder into the exchange over the Fronthaul cable network attempts to gain electronic access to cause damage or access sensitive data,"Data tampering and information disclosure;
+ Denial of service from within for component access and/or function/service offered;
+ Unauthenticated/unauthorized access of the O_RAN component leads to compromised performance and/or function/service, lateral attack towards other O-RAN system component(s) from inside, and loss/stolen/tampering of sensitive data;","C, I, A",High,Medium,Exposure (Medium),O-RAN system has many external interfaces. Different O-Cloud deployment models can be used to implement O-RAN. Several scenarios to implement O-RUs and O-DUs are supported by O-RAN.,,High
+T-RADIO-01,T-RADIO-01,"Disruption through radio Jamming , Sniffing and Spoofing",Service disruption and information exposure,"C, I, A",High,High,Exposure (High),"These attacks are common and not specific to O-RAN. They are likely to occur, hence they need more investigation and consideration. Mitigations to reduce these types of attacks should be defined by O-RAN Alliance.",,High
+T-RADIO-02,T-RADIO-02,DoS attacks on cognitive radio networks,Service disruption,A,Medium,High,Exposure (High),"These attacks are common and not specific to O-RAN. They are likely to occur, hence they need more investigation and consideration. Mitigations to reduce these types of attacks should be defined by O-RAN Alliance.",,High
+T-R1-01,T-R1-01,A malicious actor gains unauthorized access to R1 services,“Service management and exposure services Producer” determines whether the Service Producer is authorized to produce the service. An attacker can perform a spoofing attack to gain unauthorized access to R1 services.,"C, I, A",High,Medium,"• ZTA (Medium)
+ • Adverse impacts (High)",O-RAN Alliance has not specified yet any R1 security measures.,,High
+T-R1-02,T-R1-02,Attacker modifies Service Heartbeat message to cause Denial of Service,Attacker can exploit the Service Heartbeat on the R1 by modifying or inserting heartbeat messages to cause denial of service,"C, I, A",High,Medium,"• ZTA (Medium)
+ • Adverse impacts (High)",O-RAN Alliance has not specified yet any R1 security measures.,,High
+T-R1-03,T-R1-03,Malicious actor bypasses authentication to Request Data,Attacker can exploit password-based authentication on the R1 to request unauthorized data. Weak password management can easily be exploited. (Certificate-based mutual authentication using TLS and PKI X.509 certificates is recommended).,"C, I, A",High,High,"• ZTA (High)
+ • Adverse impacts (High)",O-RAN Alliance has not specified yet any R1 security measures.,,High
+T-R1-04,T-R1-04,Malicious actor bypasses authorization to Discover Data,“Data registration and discovery service producer” determines whether the Data Producer is authorized to produce the data types. An attacker can perform a spoofing attack to discover available data.,"C, I, A",High,High,"• ZTA (High)
+ • Adverse impacts (High)",O-RAN Alliance has not specified yet any R1 security measures.,,High
+T-R1-05,T-R1-05,A malicious actor gains unauthorized access to data,An attacker can perform a spoofing attack to exploit the Data request and subscription service for the purpose to gain unauthorized access to data.,"C, I, A",High,High,"• ZTA (High)
+ • Adverse impacts (High)",O-RAN Alliance has not specified yet any R1 security measures.,,High
+T-R1-06,T-R1-06,Malicious actor modifies a Data Request,"Data Consumers consume the “Data request and subscription service” to request data instances or subscribe to them. An attacker can modify a request to force the consumer to receive a different data set then that intended. Without checks, the received data could be processed, leading to erroneous decisions or triggers.","C, I, A",High,Medium,"• ZTA (Medium)
+ • Adverse impacts (High)",O-RAN Alliance has not specified yet any R1 security measures.,,High
+T-R1-07,T-R1-07,Malicious actor snoops Data Delivery to the Data Consumer,"Data delivery messages relate to a particular data request or subscription. The data can be delivered to the Data Consumer in different ways, including:
+  • as part of the payload of a data delivery message,
+ • as a data stream,
+  • from e.g., a REST endpoint, a message bus or object store location.
+ An attacker can perform snooping, injection, or modification attacks in the Delivery of Data process.",A,High,High,"• ZTA (High)
+ • Adverse impacts (High)",O-RAN Alliance has not specified yet any R1 security measures.,,High
+T-A1-01,T-A1-01,Untrusted peering between Non-RT-RIC and Near-RT-RIC,"Malicious Non-RT-RIC peers with a Near-RT-RIC over the A1 interface, or a malicious Near-RT-RIC peers with a Non-RT-RIC over the A1 interface, due to weak mutual authentication.","C, I, A",High,Medium,"• ZTA (Medium)
+ • Adverse impacts (High)",O-RAN Alliance has not specified yet any A1 security measures.,,High
+T-A1-02,T-A1-02,Malicious function or application monitors messaging across A1 interface,Attacker gains access to A1 messaging for reconnaissance,"C, I, A",High,High,"• ZTA (High)
+ • Adverse impacts (High)",O-RAN Alliance has not specified yet any A1 security measures.,,High
+T-A1-03,T-A1-03,Malicious function or application modifies messaging across A1 interface,Internal threat actor can gain access to the messaging across the A1 interface for a MiTM attack to modify or inject policy. This can result in the Near-RT RIC receiving malicious policy.,"C, I, A",High,Medium,"• ZTA (Medium)
+ • Adverse impacts (High)",O-RAN Alliance has not specified yet any A1 security measures.,,High
+T-A1-04,T-A1-04,Unauthorized access to Non-RT-RIC- or Near-RT-RIC- resources,A malicious actor can gain access to Near-RT-RIC resources or Non-RT-RIC resources over the A1 interface.,"C, I, A",High,High,"• ZTA (High)
+ • Threat event initiation (High)","ZTA: ease of performing reconnaissance attacks without immediate detection
+  
+ Threat event initiation: simple to execute for sophisticated inside actors",,High
+T-GEN-01-a,T-GEN-01,"A successful attack could:
+ - Compromise the deployed VNF/CNF","Spoofing, Tampering, Information disclosure, Elevation of Privilege","C, I",Medium,High,"• Adverse impacts (Medium), 
+ • ZTA (High)","Adverse impacts (Medium) - Only one VNF/CNF might be affected, Existing requirements and controls are defined in the O-RAN specifications that may impede successful exercise of the vulnerability. 
+ ZTA (High): Reconnaissance and availability type attacks","SBOM requirements 
+  
+ REQ-SEC-SYS-1",High
+T-GEN-01-b,T-GEN-01,"A successful attack could:
+ - Deployment of malicious VM/Container (Lack of isolation)
+ - Exploit host access to escape the host and reach hardware server then the malicious VM/Container can gain root access to the whole server where it resides","Spoofing, Tampering, Information disclosure, Elevation of Privilege","C, I",High,High,"• Adverse impacts (High), 
+ • ZTA (High)","Adverse impacts (High) - Multiple VNFs/CNFs might be affected
+ 
+ ZTA (High): Reconnaissance and availability type attacks","SBOM requirements 
+  
+ REQ-SEC-SYS-1",High
+T-GEN-02,T-GEN-02,"A successful attack could:
+ - Bypass access controls placed on various resources on O-Cloud
+ - Gain increased privilege to specific O-Cloud services
+ - Access to restricted areas of the O-Cloud network","Spoofing, Tampering, Information disclosure, Elevation of Privilege","C, I",Medium,High,"• Adverse impacts (Medium), 
+ • ZTA (High)","Adverse impacts (Medium) - Requirements are in place for user authentication and authorization
+ 
+ ZTA (High): Reconnaissance type attacks","REQ-SEC-PASS-1
+  
+ REQ-SEC-OCLOUD-1
+  
+ REQ-SEC-OCLOUD-2",High
+T-GEN-03-a,T-GEN-03,"A successful attack could:
+ - Make use of a untrusted VM/Container that runs on top of a trusted Hypervisor/Container Engine","Tampering, Information disclosure","C, I",Medium,High,"• Adverse impacts (Medium), 
+ • ZTA (High)","Adverse impacts (Medium) - Only one VNF/CNF might be affected
+ 
+ ZTA (High): Reconnaissance type attacks",,High
+T-GEN-03-b,T-GEN-03,"A successful attack could:
+ - Make use of a trusted VM/Container that runs on top of an untrusted Hypervisor/Container Engine to intercept communication, replace strong or use weak cryptographic keys, etc.","Tampering, Information disclosure","C, I",High,High,"• Adverse impacts (High), 
+ • ZTA (High)","Adverse impacts (High) - Multiple VNFs/CNFs might be affected
+ 
+ ZTA (High): Reconnaissance and availability type attacks",,High
+T-GEN-03-C,T-GEN-03,"A successful attack could:
+ - Make use of a trusted VM/Container that runs on top of a trusted Hypervisor/Container Engine that runs on top of an untrusted hardware to intercept communication, replace strong or use weak cryptographic keys, etc.","Tampering, Information disclosure","C, I",High,High,"• Adverse impacts (High), 
+ • ZTA (High)","Adverse impacts (High) - Multiple VNFs/CNFs might be affected
+ 
+ ZTA (High): Reconnaissance and availability type attacks",,High
+T-GEN-04,T-GEN-04,"A successful attack could:
+ - Compromise the availability of O-Cloud services
+ - Compromise the confidentiality/integrity of O-Cloud services by extracting/modifying critical application data","Information disclosure, Denial of Service","C, A",High,High,"• Adverse impacts (High), 
+ • ZTA (High)","Adverse impacts (High) – No existing controls for interfaces in O-Cloud
+ 
+ ZTA (High): Reconnaissance and availability type attacks",,High
+T-GEN-05 (a),T-GEN-05,"A successful attack could:
+ - view insecurely stored credentials and cryptographic materials","Information disclosure, Elevation of Privilege",C,Medium,High,"Adverse impacts (Medium), 
+ ZTA (High)","Adverse impacts (Medium) – Requirements are defined for sensitive data protection in the O-RAN security specifications
+  
+ ZTA (High): Reconnaissance type attacks","REQ-SEC-OCLOUD-SS-1
+ REQ-SEC-OCLOUD-SS-2
+ REQ-SEC-OCLOUD-SS-3
+ SEC-CTL-OCLOUD-SS-1
+ SEC-CTL-OCLOUD-SS-2
+ SEC-CTL-OCLOUD-SS-3",High
+T-GEN-05 (b),T-GEN-05,"A successful attack could:
+ - modify insecurely stored credentials and cryptographic materials","Tampering, Elevation of Privilege",I,Medium,Medium,"Adverse impacts (Medium), 
+ ZTA (Medium)","Adverse impacts (Medium) – Requirements are defined for sensitive data protection in the O-RAN security specifications
+  
+ ZTA (Medium): Integrity type attacks","REQ-SEC-OCLOUD-SS-1
+ REQ-SEC-OCLOUD-SS-2
+ REQ-SEC-OCLOUD-SS-3
+ SEC-CTL-OCLOUD-SS-1
+ SEC-CTL-OCLOUD-SS-2
+ SEC-CTL-OCLOUD-SS-3",Medium
+T-GEN-06,T-GEN-06,"A successful attack could:
+ - Gain access to the sensitive information
+ - Escalate privileges in Applications","Information disclosure, Elevation of Privilege",C,Medium,Medium,"Adverse impacts (Medium), 
+ ZTA (High)","Adverse impacts (Medium) – Requirements are defined for sensitive data protection in the O-RAN security specifications
+  
+ ZTA (High): Reconnaissance type attacks",,Medium
+T-VM-C-01,T-VM-C-01,"A successful attack could:
+ - Compromise VM/Container isolation measures
+ - Gain higher privileges on host or any of the containers running on that host
+ - Perform unauthorized modifications to the contents of host filesystem e.g. install SSH keys, read secrets mounted to the host, and take other malicious actions","Spoofing, Tampering, Information disclosure, Denial of Service and Elevation of privilege","C, I, A",High,High,"• Adverse impacts (High), 
+ • ZTA (High)","Adverse impacts (High) – No existing requirements
+ 
+ ZTA (High): Reconnaissance and availability type attacks",,High
+T-VM-C-02,T-VM-C-02,"A successful attack could:
+ - Deploy a new malicious VM/Container configured without network rules, user limitations, etc. to bypass existing defenses within O-Cloud infrastructure
+ - Compromise the confidentiality & integrity of co-hosted VMs/Containers and tenants
+ - Launch DDOS attacks on co-hosted VMs/Containers and host services thereby degrading their performance","Spoofing, Tampering, Information disclosure, Denial of Service and Elevation of privilege","C, I, A",High,Medium,"• Adverse impacts (High), 
+ • ZTA (Medium)","Adverse impacts (High) – No existing requirements
+ 
+ ZTA (Medium) - Availability type attacks",,High
+T-VM-C-03,T-VM-C-03,"A successful attack could:
+ - Retrieve/manipulate VNF/CNF sensitive data (e.g. passwords, private keys, subscription data, logs)","Tampering, Information disclosure","C, I",High,High,"• Adverse impacts (High), 
+ • ZTA (High)","Adverse impacts (High) – No existing requirements
+ 
+ ZTA (High): Reconnaissance type attacks",,High
+T-VM-C-04-a,T-VM-C-04,"A successful attack could:
+ - Cause migration Flooding: VM/Container performance degradation and VM/Container crashes","Tampering, Information disclosure, Denial of Service","C, I, A",High,Medium,"• Adverse impacts (High), 
+ • ZTA (Medium)","Adverse impacts (High) – No existing requirements
+ 
+ ZTA (Medium): Availability type attacks",,High
+T-VM-C-04-b,T-VM-C-04,"""A successful attack could:
+ - Sniff the packets that are exchanged between the source and destination servers
+ - Read the migrated memory pages
+ - Monitor and/or modify the received packets while continuing to forward them to victim VM/Container""","Tampering, Information disclosure, Denial of Service","C, I, A",High,High,"• Adverse impacts (High), 
+ • ZTA (High)","Adverse impacts (High) – No existing requirements
+ 
+ ZTA (High): Reconnaissance type attacks",,High
+T-VM-C-05,T-VM-C-05,"A successful attack could:
+ - Misguide the Virtualization layer to reduce the resource of or delete a VM/Container on which a VNF/CNF is running. This can result in the reliability, availability or even illegal termination of a VNF/CNF and hence the denial of service
+ - Misguide the O-Cloud platform to detach a hardware accelerator from a VNF/CNF",Denial of Service,A,High,Medium,"• Adverse impacts (High), 
+ • ZTA (Medium)","Adverse impacts (High) – No existing requirements
+ 
+ ZTA (Medium): Availability type attacks",,High
+T-VM-C-06,T-VM-C-06,"A successful attack could:
+ - Access to data not erased from a terminated VNF/CNF or any VNF/CNF that has released resources",Information disclosure,C,High,High,"• Adverse impacts (High), 
+ • ZTA (High)","Adverse impacts (High) – No existing requirements
+ 
+ ZTA (High): Reconnaissance and availability type attacks",,High
+T-IMG-01,T-IMG-01,"A successful attack could:
+ - Insert malicious code that will subsequently get run in the production environment","Tampering, Information disclosure","C, I",Medium,High,"• Adverse impacts (Medium), 
+ • ZTA (High)","Adverse impacts (Medium) – Requirements are defined for image protection in the O-RAN security specifications
+ 
+ ZTA (High): Reconnaissance and availability type attacks","REQ-SEC-ALM-PKG-1 to REQ-SEC-ALM-PKG-15
+  
+ SEC-CTL-ALM-PKG-1 to SEC-CTL-ALM-PKG-4",High
+T-IMG-02,T-IMG-02,"A successful attack could:
+ - Intercept network traffic intended for registries and steal developer or administrator credentials within that traffic. Thus, could be used to provide fraudulent or outdated images to orchestrators, etc.","Tampering, Information disclosure","C, I",Medium,High,"• Adverse impacts (Medium), 
+ • ZTA (High)","Adverse impacts (Medium) – Requirements are defined for image protection in the O-RAN security specifications
+ 
+ ZTA (High): Reconnaissance and availability type attacks","REQ-SEC-ALM-PKG-1 to REQ-SEC-ALM-PKG-15
+  
+ SEC-CTL-ALM-PKG-1 to SEC-CTL-ALM-PKG-4",High
+T-IMG-03,T-IMG-03,"A successful attack could:
+ - Secrets embedded within a VM/Container image can be stolen 
+ - Secrets embedded within a VM/Container image can be modified","Spoofing, Tampering, Information disclosure","C, I",Medium,High,"• Adverse impacts (Medium), 
+ • ZTA (High)","Adverse impacts (Medium) – Requirements are defined for image protection in the O-RAN security specifications
+ 
+ ZTA (High): Reconnaissance and availability type attacks","REQ-SEC-ALM-PKG-1 to REQ-SEC-ALM-PKG-15
+  
+ SEC-CTL-ALM-PKG-1 to SEC-CTL-ALM-PKG-4",High
+T-IMG-04,T-IMG-04,"A successful attack could:
+ - Build a custom image on the host that includes malware and then may deploy container using that custom image","Spoofing, Tampering, Information disclosure, Denial of Service and Elevation of privilege","C, I, A",Medium,High,"• Adverse impacts (Medium), 
+ • ZTA (High)","Adverse impacts (Medium) – Requirements are defined for image protection in the O-RAN security specifications
+ 
+ ZTA (High): Reconnaissance and availability type attacks","REQ-SEC-ALM-PKG-1 to REQ-SEC-ALM-PKG-15
+  
+ SEC-CTL-ALM-PKG-1 to SEC-CTL-ALM-PKG-4",High
+T-VL-01,T-VL-01,"A successful attack could:
+ - Gain control over the host of a server or install a malicious Hypervisor/Container Engine/Host OS and exploit that to run malicious applications on the VM/Container that run on top of the host. This would enable the attacker to control all the VMs/Containers running on the host.","Spoofing, Tampering, Information disclosure, Denial of Service and Elevation of privilege","C, I, A",High,High,"• Adverse impacts (High), 
+ • ZTA (High)","Adverse impacts (High) - No existing requirements
+ 
+ ZTA(High) - Reconnaissance and availability type of attacks",,High
+T-VL-02,T-VL-02,"A successful attack could cause:
+ - Failure of the physical machine to start at all
+ - Physical machine entering a safe-mode
+ - Physical machine continuing boot regardless of the integrity measurements",Tampering,I,High,Medium,"• Adverse impacts (High), 
+ • ZTA (Medium)","Adverse Impact (High) - No existing requirements
+ 
+ ZTA(Medium) - Availability type attacks",,High
+T-VL-03,T-VL-03,"A successful attack could:
+ - cause denial-of-service against the service discovery infrastructure to prevent O-Cloud to react to changing resource requirements properly",Denial of Service,A,Medium,Medium,"Adverse impacts (Medium), 
+ ZTA (Medium)","Adverse impacts (Medium) – Requirements are defined for O-Cloud authentication and authorization
+ in the O-RAN security specifications.
+ 
+ ZTA (Medium): Availability type attacks","REQ-SEC-OCLOUD-O2dms-1
+ REQ-SEC-OCLOUD-O2dms-2
+ REQ-SEC-OCLOUD-O2dms-3
+ REQ-SEC-OCLOUD-O2dms-4
+ REQ-SEC-OCLOUD-O2ims-1
+ REQ-SEC-OCLOUD-O2ims-2
+ REQ-SEC-OCLOUD-O2ims-3
+ REQ-SEC-OCLOUD-O2ims-4
+ REQ-SEC-O-CLOUD-NotifAPI-1
+ REQ-SEC-O-CLOUD-NotifAPI-2
+ SEC-CTL-O-CLOUD-INTERFACE-1
+ SEC-CTL-O-CLOUD-INTERFACE-2
+ SEC-CTL-O-CLOUD-INTERFACE-3
+ REQ-SEC-OCLOUD-ISO-1
+ REQ-SEC-OCLOUD-ISO-2
+ REQ-SEC-OCLOUD-ISO-3
+ REQ-SEC-OCLOUD-ISO-4",Medium
+T-O2-01,T-O2-01,"A successful attack could:
+ - Tamper/alter/disclose requests and services sent over O2 between O-Cloud and SMO, hence the virtualized resource or relevant status information is not as requested
+ - Affect the normal operation of the O-Cloud, and even causes DoS attacks, information leakage.","Tampering, Information disclosure, Denial of Service","C, I, A",Low,High,"• Adverse impacts (Low), 
+ • ZTA (High)","Adverse impacts (Low) – Requirements are defined for the protection of O2 interface in the O-RAN security specifications
+ 
+ ZTA (High): Reconnaissance and availability type attacks","REQ-SEC-O2-1
+ SEC-CTL-O2-2
+ REQ-SEC-DOS-1",Medium
+T-OCAPI-01,T-OCAPI-01,"A successful attack could:
+ - Cryptographic keys or other security critical data of an instantiated VNF/CNF could be stolen by an attacker with access to the virtualization layer
+ - The virtualized resource provided by the Virtualization layer to the instantiated VNF/CNF can be manipulated","Tampering, Information disclosure, Denial of Service","C, I, A",Low,High,"• Adverse impacts (Low), 
+ • ZTA (High)","Adverse impacts (Low) – Requirements are defined for the protection of O-Cloud API in the O-RAN security specifications
+ 
+ ZTA (High): Reconnaissance and availability type attacks","REQ-SEC-O2-1
+ SEC-CTL-O2-2
+ REQ-SEC-DOS-1",Medium
+T-HW-01,T-HW-01,"A successful attack could:
+ - Maliciously placed VM/Container extracts information from the target VM/Container with the side channel attack","Tampering, Information disclosure, Denial of Service","C, I, A",High,High,"• Adverse impacts (High), 
+ • ZTA (High)","Adverse Impact (High) - No existing requirements
+ 
+ ZTA (High): Reconnaissance and availability type attacks",,High
+T-HW-02,T-HW-02,"A successful attack could:
+ - Extract useful information such as cryptographic keys from the target VM/Container to use them for traffic eavesdropping and man-in-the-middle attacks.","Tampering, Information disclosure, Denial of Service","C, I, A",High,High,"• Adverse impacts (High), 
+ • ZTA (High)","Adverse Impact (High) - No existing requirements
+ 
+ ZTA (High): Reconnaissance and availability type attacks",,High
+T-AAL-01,T-AAL-01,"A successful attack could:
+ - tamper the requests/responses sent between the AAL components, the O-Cloud platform and O-RAN APPs/VNFs/CNFs",Tampering,I,High,Medium,"Adverse impacts (Medium), 
+ ZTA (High)","Adverse impacts (High) – Not security requirements yet for AAL in O-RAN security specifications
+ 
+ ZTA (Medium): Integrity type attacks",,High
+T-AAL-02,T-AAL-02,"A successful attack could:
+ - cause DoS attack or increased traffic on AAL interfaces",Denial of Service,A,High,Medium,"Adverse impacts (Medium), 
+ ZTA (High)","Adverse impacts (High) – Not security requirements yet for AAL in O-RAN security specifications
+ 
+ ZTA (Medium): Availability type attacks",,High
+T-AAL-03 (a),T-AAL-03,Fail to clear resources,Information disclosure,C,High,High,"Adverse impacts (High),
+ ZTA (High)","Adverse impacts (High) – Not security requirements yet for AAL in O-RAN security specifications
+ 
+ ZTA (High): reconnaissance type attacks",,High
+T-AAL-03 (b),T-AAL-03,Fail to clear resources,Denial of service,A,High,Medium,"Adverse impacts (High),
+ ZTA (Medium)","Adverse impacts (High) – Not security requirements yet for AAL in O-RAN security specifications
+ 
+ ZTA (Medium): Availability type attacks",,High
+T-AAL-04 (a),T-AAL-04,HAM compromise,Tampering,I,High,Medium,"Adverse impacts (High),
+ ZTA (Medium)","Adverse impacts (High) – Not security requirements yet for AAL in O-RAN security specifications
+ 
+ ZTA (Medium): Integrity type attacks",,High
+T-AAL-04 (b),T-AAL-04,HAM compromise,Denial of service,A,High,Medium,"Adverse impacts (High), ZTA (Medium)","Adverse impacts (High) – Not security requirements yet for AAL in O-RAN security specifications
+ 
+ ZTA (Medium): Availability type attacks",,High
+T-AAL-05 (a),T-AAL-05,Malicious memory accesses,Information disclosure,C,High,High,"Adverse impacts (High),
+ ZTA (High)","Adverse impacts (High) – Not security requirements yet for AAL in O-RAN security specifications
+ 
+ ZTA (High): reconnaissance type attacks",,High
+T-AAL-05 (b),T-AAL-05,Malicious memory accesses,Tampering,I,High,Medium,"Adverse impacts (High), ZTA (Medium)","Adverse impacts (High) – Not security requirements yet for AAL in O-RAN security specifications
+ 
+ ZTA (Medium): Integrity type attacks",,High
+T-AAL-05 (c),T-AAL-05,Malicious memory accesses,Denial of service,A,High,Medium,"Adverse impacts (High), ZTA (Medium)","Adverse impacts (High) – Not security requirements yet for AAL in O-RAN security specifications
+ 
+ ZTA (Medium): Availability type attacks",,High
+T-AAL-06 (a),T-AAL-06,Software attacks,Information disclosure,C,High,High,"Adverse impacts (High),
+ ZTA (High)","Adverse impacts (High) – Not security requirements yet for AAL in O-RAN security specifications
+ 
+ ZTA (High): reconnaissance type attacks",,High
+T-AAL-06 (b),T-AAL-06,Software attacks,Tampering,I,High,Medium,"Adverse impacts (High), ZTA (Medium)","Adverse impacts (High) – Not security requirements yet for AAL in O-RAN security specifications
+ 
+ ZTA (Medium): Integrity type attacks",,High
+T-O-CLOUD-ID-01,T-O-CLOUD-ID-01,"In the O-Cloud environment, the reuse of IDs from deleted objects for new objects can lead to unintended data associations, leaks, and operational disruptions.","Tampering, Information disclosure","C, I",High,High,"Adverse impacts (High),
+ ZTA (High)","Adverse impacts (High) – Not security requirements yet for O-Cloud ID in O-RAN security specifications
+ 
+ ZTA (High): reconnaissance and integrity type attacks",,High
+T-O-CLOUD-ID-02,T-O-CLOUD-ID-02,"In O-Cloud deployments, replacing failed machines without proper management of their corresponding Node objects can lead to resource mismatches, stale data inheritance, and network inconsistencies.","Spoofing, Tampering, Information disclosure, Denial of Service","C, I, A",High,High,"Adverse impacts (High),
+ ZTA (High)","Adverse impacts (High) – Not security requirements yet for O-Cloud ID in O-RAN security specifications
+ 
+ ZTA (High): reconnaissance, integrity, and availability type attacks",,High
+T-O-CLOUD-ID-03,T-O-CLOUD-ID-03,"In the O-Cloud environment, improper management of object IDs can lead to overlaps, inconsistencies, unauthorized access, and operational disruptions.","Spoofing, Tampering, Information Disclosure, Repudiation, Elevation of Privilege, Denial of Service","C, I, A",High,High,"Adverse impacts (High),
+ ZTA (High)","Adverse impacts (High) – Not security requirements yet for O-Cloud ID in O-RAN security specifications
+ 
+ ZTA (High): reconnaissance, integrity, and availability type attacks",,High
+T-ADMIN-01,T-ADMIN-01,"A successful attack could:
+ - Lead to the inability to react to changing resource requirements
+ - Operators may be unable to retrieve logs, telemetry data
+ - Prevents the O-Cloud software update (VNFs/CNFs, VL) to exploit a known security flaw in the O-Cloud software",Denial of Service,A,Medium,Medium,"• Adverse impacts (Medium), 
+ • ZTA (Medium)","Adverse impacts (Medium) – Requirements are defined for the protection against DoS attacks and for the protection of O-Cloud API and O2 interface in the O-RAN security specifications
+ 
+ ZTA (Medium): Availability type attacks",REQ-SEC-DOS-1,Medium
+T-ADMIN-02,T-ADMIN-02,"A successful attack could:
+ - Deploy new instances and disrupt existing O-Cloud services
+ - Submit compromised VM/Container images that unsuspecting tenants then use to initiate O-Cloud services
+ - Extract business data, configuration data, user data and possibly credentials
+ - Create backups of VM/Container instances or export VM/Container images","Tampering, Information disclosure, Denial of Service and Elevation of privilege","C, I, A",Medium,High,"• Adverse impacts (High), 
+ • ZTA (High)","Adverse impacts (Medium) – Requirements are defined for the protection of O-Cloud API and O2 interface in the O-RAN security specifications
+ 
+ ZTA (High): Reconnaissance and availability type attacks","REQ-SEC-PASS-1
+ REQ-SEC-O2-1
+ SEC-CTL-O2-2
+ REQ-SEC-DOS-1",High
+T-AIML-IM-1,T-AIML-IM-1,"A successful attack could:
+ - Take alter a subset of the training data by inserting or modifying training samples",Integrity,I,High,Low,"• Impact on integrity (High) 
+ • Threat event initiation (low)","• Impact on integrity: Bad training data will cause the model to behave incorrectly 
+ • Threat event initiation: needs high sophistication to execute",,Medium
+T-AIML-IM-2,T-AIML-IM-2,"A successful attack could:
+ - generate adversarial examples in the model",Tampering,I,High,Low,"• Impact on integrity (High)
+ • Threat event initiation (low)","• Impact on integrity: major change in normal AI/ML functioning
+ • Threat event initiation: needs high sophistication to execute",,Medium
+T-AIML-IM-3,T-AIML-IM-3,"A successful attack could:
+ - mis-assign labels to training data",Tampering,I,High,Low,"• Impact on integrity (High)
+ • Threat event initiation (low)","• Impact on integrity: major change in normal AI/ML functioning
+ • Threat event initiation: needs high sophistication to execute",,Medium
+T-AIML-IM-4,T-AIML-IM-4,"A successful attack could:
+ - allow an adversary to submit queries to the model and receive predictions (either labels or model confidences) and confidential data",Confidentiality,C,High,Low,"• Impact on confidentiality (High)
+ • Threat event initiation (low)","• Impact on confidentiality: major change in normal AI/ML functioning
+ • Threat event initiation: needs high sophistication to execute",,Medium
+T-AIML-DP-01,T-AIML-DP-01,"A successful attack could:
+ -inject poisoned data which can be consumed by AI/ML for training.",Tampering,I,High,Medium,"• Impact on integrity (High)
+ • Threat event initiation (Medium)","• Impact on integrity: major change in normal AI/ML functioning
+ • Threat event initiation: needs sophistication to execute",,High
+T-AIML-DP-02,T-AIML-DP-02,"A successful attack could:
+ -enable the attacker to get more details about the AI/ML algorithms being used and parameters configured if any",Tampering,I,High,Medium,"• Impact on integrity (High)
+ • Threat event initiation (Medium)","• Impact on integrity: major change in normal AI/ML functioning
+ • Threat event initiation: needs sophistication to execute",,High
+T-AIML-DP-03,T-AIML-DP-03,"A successful attack could:
+ - enable the attacker to modify the behaviour of AI/ML algorithm with slow poisoning",Tampering,I,High,Medium,"• Impact on integrity (High)
+ • Threat event initiation (Medium)","• Impact on integrity: major change in normal AI/ML functioning
+ • Threat event initiation: needs sophistication to execute",,High
+T-AIML-MEI-01,T-AIML-MEI-01,A successful attack based on level of information available to attacker can result in disclosing specific individual’s data used in training the model,Information Disclosure,C,High,Medium,"• Impact on confidentiality (High)
+ • Threat event initiation (Medium)","• Impact on confidentiality: Knowledge of information used in training gets exposed
+ • Threat event initiation needs sophistication to execute",,High
+T-AIML-MEI-02,T-AIML-MEI-02,A successful attack based on analysis methods used by the attacker can result in disclosing specific individual’s data used in training the model,Information Disclosure,C,High,Medium,"• Impact on confidentiality (High)
+ • Threat event initiation (Medium)","• Impact on confidentiality: Knowledge of information used in training gets exposed
+ • Threat event initiation needs sophistication to execute",,High
+T-AIML-MEI-03,T-AIML-MEI-03,A successful target based attack can result in disclosing specific individual’s data or a group's data used in training the model,Information Disclosure,C,High,Medium,"• Impact on confidentiality (High)
+ • Threat event initiation (Medium)","• Impact on confidentiality: Knowledge of information used in training gets exposed
+ • Threat event initiation needs sophistication to execute",,High
+T-AIML-ME-01,T-AIML-ME-01,"A successful attack could:
+ -Cause theft of intellectual property
+ -Undermine the original developer's competitive advantage",Confidentiality,C,High,Low,"• Impact on confidentiality (High) 
+ • Threat event initiation (low)","• Impact on confidentiality: Disclosure of high value information 
+ • Threat event initiation: needs high sophistication to execute",,Medium
+T-AIML-ME-02,T-AIML-ME-02,"A successful attack could:
+ -Cause privacy breaches",Confidentiality,C,High,Low,"• Impact on confidentiality (High)
+ • Threat event initiation (low)","• Impact on confidentiality: Disclosure of high value information
+ • Threat event initiation: needs high sophistication to execute",,Medium
+T-AIML-ME-03,T-AIML-ME-03,"A successful attack could:
+ -allow adversarial attacks
+ -allow targeted attacks",Tampering,I,High,Low,"• Impact on integrity (High)
+ • Threat event initiation (low)","• Impact on integrity: major change in normal AI/ML functioning
+ • Threat event initiation: needs high sophistication to execute",,Medium
+T-AIML-MOI-01,T-AIML-MOI-01,"A successful attack could:
+ - Cause disclosure of sensitive/proprietary data",Confidentiality,C,High,Medium,"• Impact on confidentiality (High) 
+ • Threat event initiation (medium)","• Impact on confidentiality: Disclosure of high value information 
+ • Threat event initiation: needs medium sophistication to execute",,High
+T-AIML-MOI-02,T-AIML-MOI-02,"A successful attack could:
+ - allow an attacker to reconstruct the original training data with higher accuracy",Confidentiality,C,High,Low,"• Impact on confidentiality (High)
+ • Threat event initiation (low)","• Impact on confidentiality: major change in normal AI/ML functioning
+ • Threat event initiation: needs high sophistication to execute",,Medium
+T-AIML-SC-01,T-AIML-SC-01,"A successful attack could:
+ -corrupt or manipulate training datasets
+ - cause degraded performance, wrong decisions, or even backdoors in the final system","Tampering, Denial of Service",IA,High,Medium,"• Impact on confidentiality (High)
+ • Threat event initiation (Medium)",needs sophistication to execute,,High
+T-AIML-SC-02,T-AIML-SC-02,"A successful attack could:
+ -inject malicious code or logic into the AI model itself during training or deployment","Tampering, Confidentiality",CI,High,Low,"• Impact on confidentiality (High)
+ • Threat event initiation (low)",needs high sophistication to execute,,Medium
+T-AIML-SC-03,T-AIML-SC-03,"A successful attack could:
+ -infect the model with malicious code that remains dormant until it receives a specific trigger","Tampering, Confidentiality",CI,High,Low,"• Impact on confidentiality (High)
+ • Threat event initiation (low)",needs high sophistication to execute,,Medium
+T-AIML-SC-04,T-AIML-SC-04,"A successful attack could:
+ -manipulate the hardware used for AI processing, such as GPUs, ASICs, or FPGAs","Tampering, Confidentiality",CI,High,Low,"• Impact on confidentiality (High)
+ • Threat event initiation (low)",needs high sophistication to execute,,Medium
+T-AIML-SC-05,T-AIML-SC-05,"A successful attack could:
+ -inject malicious code or exfiltrate sensitive information from the target system.","Tampering, Confidentiality",CI,High,Low,"• Impact on confidentiality (High)
+ • Threat event initiation (low)",needs high sophistication to execute,,Medium
+T-AIML-SC-06,T-AIML-SC-06,"A successful attack could:
+ -insert vulnerabilities or backdoors that attackers can exploit","Tampering, Confidentiality",CI,High,Low,"• Impact on confidentiality (High)
+ • Threat event initiation (low)",needs high sophistication to execute,,Medium
+T-AIML-OI-01,T-AIML-OI-01,"A successful attack could cause :
+ - service disruption of the O-RAN elements that are using configuration / policies derived from the manipulated output of a model .",Denial of Service,A,High,Medium,"• Impact on Availability (High)
+ • Adverse impacts (Medium)","• Impact on Availability (High): Prolonged interruption of operations.
+ • Adverse impacts (Medium) – O-RAN Alliance has specified security for O-RAN interfaces at the transport layers thereby mitigating access to O-RAN functions through the interfaces. The O-RAN Alliance has not yet specified security for regarding the Training or test data sets collected externally or internally, Trained ML model ,
+ ML prediction results .",,High
+T-AIML-OI-02,T-AIML-OI-02,AI/ML models are used to perform QoE optimization and QoE based traffic steering in O-RAN [i.14]. A carefully crafted manipulation of the output of AI/ML model can be used to degrade the QoE of a subscriber or a group of subscribers.,Tampering,I,High,Medium,"• Impact on Integrity (High)
+ • Adverse impacts (Medium)","• Impact on Integrity (High): Major change in normal AI/ML system functioning.
+ • Adverse impacts (Medium) – O-RAN Alliance has specified security for O-RAN interfaces at the transport layers thereby mitigating access to O-RAN functions through the interfaces. The O-RAN Alliance has not yet specified security for regarding the Training or test data sets collected externally or internally, Trained ML model ,
+ ML prediction results .",,High
+T-AIML-MP-01,T-AIML-MP-01,A successful attack can change the parameters file which will cause the model to make incorrect predictions.,Tampering,I,High,Medium,"• Impact on integrity (High)
+  
+ • Threat event initiation (Medium)","• Impact on integrity: major change in normal AI/ML functioning
+  
+ • Threat event initiation needs sophistication to execute",,High
+T-AIML-MP-02,T-AIML-MP-02,A successful attack can change the inference algorithm which will cause the model to make incorrect predictions.,Tampering,I,High,Medium,"• Impact on integrity (High)
+  
+ • Threat event initiation (Medium)","• Impact on integrity: major change in normal AI/ML functioning
+  
+ • Threat event initiation needs sophistication to execute",,High
+T-AIML-MP-03,T-AIML-MP-03,A successful attack can change the learning algorithm which will cause the model to make incorrect predictions.,Tampering,I,High,Medium,"• Impact on integrity (High)
+  
+ • Threat event initiation (Medium)","• Impact on integrity: major change in normal AI/ML functioning
+  
+ • Threat event initiation needs sophistication to execute",,High
+T-AIML-MP-04,T-AIML-MP-04,"A successful attack could:
+ - create a Trojan trigger in the model
+ -send malicious local model updates in federated learning",Integrity,I,High,Low,"• Impact on integriity (High)
+ • Threat event initiation (low)","• Impact on integrity: Disclosure of high value information
+ • Threat event initiation: needs high sophistication to execute",,Medium
+T-AIML-MS-01,T-AIML-MS-01,"A successful attack could:
+ modify data which can result in a skewed trained model resulting in incorrect ML output",Tampering,I,High,Medium,"• Impact on integrity (High)
+ • Threat event initiation (Medium)","• Impact on integrity: major change in normal AI/ML functioning
+ • Threat event initiation needs sophistication to execute",,High
+T-AIML-MS-02,T-AIML-MS-02,"A successful attack could:
+ manipulate the feedback mechanism used by AI/ML for continuous improvement during deployment, which can be result in a skewed trained model resulting in incorrect ML output",Tampering,I,High,Medium,"• Impact on integrity (High)
+ • Threat event initiation (Medium)","• Impact on integrity: major change in normal AI/ML functioning
+ • Threat event initiation needs sophistication to execute",,High
+T-AIML-TL-01,T-AIML-TL-01,"A successful attack could:
+ -corrupt or manipulate training datasets
+ - cause degraded performance, wrong decisions, or even backdoors in the final system",Tampering,I,High,Medium,"• Impact on integrity (High)
+ • Threat event initiation (Medium)",needs sophistication to execute,,High
+T-AIML-TL-02,T-AIML-TL-02,"A successful attack could:
+ - extract sensitive information about its architecture and parameters",Confidentiality,C,High,Low,"• Impact on confidentiality (High)
+ • Threat event initiation (low)",needs high sophistication to execute,,Medium
+T-AIML-TL-03,T-AIML-TL-03,"A successful attack could:
+ - bypass security systems or cause misclassifications in critical applications like self-driving cars or healthcare.",Tampering,I,High,Low,"• Impact on integrity (High)
+ • Threat event initiation (low)",needs high sophistication to execute,,Medium
+T-AIML-TL-04,T-AIML-TL-04,"A successful attack could:
+ -infect the model with malicious code that remains dormant until it receives a specific trigger","Tampering, Confidentiality",CI,High,Low,"• Impact on confidentiality and integrity (High)
+ • Threat event initiation (low)",needs high sophistication to execute,,Medium
+T-AIML-EL-01,T-AIML-EL-01,"A successful attack could:
+ - deduce the structure of the neural network, including the types of layers, their sequence, and possibly hyperparameters",Confidentiality,C,High,Low,"• Impact on confidentiality (High)
+ • Threat event initiation (Low)",needs high sophistication to execute,,Medium
+T-AIML-EL-02,T-AIML-EL-02,"A successful attack could:
+ - make inferences about the input data, potentially leading to privacy breaches, especially if the data is sensitive",Confidentiality,C,High,Low,"• Impact on confidentiality (High)
+ • Threat event initiation (low)",needs high sophistication to execute,,Medium
+T-AIML-EL-03,T-AIML-EL-03,"A successful attack could:
+ - maximize energy consumption or computation time, leading to a denial of service by overloading the system or draining battery life.",Denial of Service,A,High,Low,"• Impact on availability (High)
+ • Threat event initiation (low)",needs high sophistication to execute,,Medium
+T-AIML-EV-01,T-AIML-EV-01,"A successful attack could:
+ - Compromise Authentication Systems tricking AI/ML systems into granting access to unauthorized users
+ - Undermine Integrity of Data by tricking AI/ML systems into drawing incorrect conclusions",Tampering,I,High,Medium,"• Impact on integrity (High)
+ • Threat event initiation (Medium)",needs sophistication to execute,,High
+T-TS-01,T-TS-01,Disruption or manipulation of the time synchronization process within the O-Cloud environment can lead to severe security and operational issues.,"An attacker may target the time synchronization mechanisms to alter time settings across nodes, leading to data integrity loss, authentication and authorization bypass, and operational disruption.","I, A",High,Medium,"Impact of Integrity and Availability (High)
+  
+ Threat Event Initiation (Medium)","Impact of Integrity and Availability (High): due to potential widespread operational and security impacts, including data integrity loss and operational disruptions affecting multiple nodes.
+  
+ Threat Event Initiation (Medium): it requires elevated privileges to modify time synchronization settings.",,High

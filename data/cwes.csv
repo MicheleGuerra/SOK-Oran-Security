@@ -1,0 +1,12 @@
+CWE ID,Description
+CWE-20,Improper Input Validation
+CWE-120,Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')
+CWE-125,Out-of-bounds Read
+CWE-129,Improper Validation of Array Index
+CWE-400,Uncontrolled Resource Consumption
+CWE-476,NULL Pointer Dereference
+CWE-617,Reachable Assertion
+CWE-770,Allocation of Resources Without Limits or Throttling
+CWE-787,Out-of-bounds Write
+CWE-835,Loop with Unreachable Exit Condition ('Infinite Loop')
+CWE-862,Missing Authorization

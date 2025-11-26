@@ -1,0 +1,363 @@
+Threat ID,Threat title,Threat agent,Vulnerability,Threatened Asset,Affected Components,Threat Type,Extra Interfaces
+T-O-RAN-01,An attacker exploits insecure designs or lack of adaption in O-RAN components,All,"· Outdated component from the lack of update or patch management 
+ · Poorly design architecture 
+ · Missing appropriate security hardening
+ · Unnecessary or insecure function/protocol/component",All,All,O-RAN specific,
+T-O-RAN-02,An attacker exploits misconfigured or poorly configured O-RAN components,All,"· Errors from the lack of configuration change management 
+ · Misconfigured or poorly configured O-RAN components
+ · Improperly configured permissions
+ · Unnecessary features are enabled (e.g. unnecessary ports, services, accounts, or privileges)
+ · Default accounts and their passwords still enabled and unchanged
+ · Security features are disabled or not configured securely",All,All,O-RAN specific,
+T-O-RAN-03,Attacks from the internet to penetrate O-RAN network boundary,All,"Errors in the design and implementation of the network protocols (HTTP, P, TCP, UDP, application protocols)",All,All,O-RAN specific,
+T-O-RAN-04,An attacker attempts to jam the airlink signal through IoT devices,All,Failure to address overload situations,"ASSET-D-06, ASSET-D-18","O-RU, airlink with UE, O-DU",O-RAN specific,
+T-O-RAN-05,"An attacker penetrates and compromises the O-RAN system through the open O-RAN’s Fronthaul, O1, O2, A1, and E2",All,"· Improper or missing authentication and authorization processes
+ · Improper or missing ciphering and integrity checks of sensitive data exchanged over O-RAN interfaces
+ · Improper or missing replay protection of sensitive data exchanged over O-RAN interfaces
+ · Improper prevention of key reuse",All,"rApps, xApps, O-RU, O-DU, O-CU, Near-RT RIC, Non-RT RIC",O-RAN specific,
+T-O-RAN-06,An attacker exploits insufficient/improper mechanisms for authentication and authorization to compromise O-RAN components,All,"· Unauthenticated access to O-RAN functions 
+ · Improper authentication mechanisms 
+ · Use of Predefined/ default accounts
+ · Weak or missing password policy 
+ · Lack of mutual authentication to O-RAN components and interfaces
+ · Failure to block consecutive failed login attempts
+ · Improper authorization and access control policy",All,All,O-RAN specific,
+T-O-RAN-07,An attacker compromises O-RAN monitoring mechanisms and log files integrity and availability,All,"· Lack of security event logging
+ · Insufficient protection of log files",ASSET-D-29,All,O-RAN specific,
+T-O-RAN-08,"An attacker compromises O-RAN data integrity, confidentiality and traceability",All,"· Improper or missing ciphering of sensitive data in storage or in transfer
+ · Improper or missing integrity mechanisms to protect sensitive data in storage or in transfer
+ · Presence of active function(s) that reveal confidential internal data 
+ · No traceability (logging) of access to personal data",ASSET-D-01 to ASSET-D-29,All,O-RAN specific,
+T-O-RAN-09,An attacker compromises O-RAN components integrity and availability,All,"· Improper handling of overload situations 
+ · Unrestricted boot memory devices 
+ · Lack of / improper mechanisms for Network Product software package integrity validation",ASSET-C-01 to ASSET-C-12,All,O-RAN specific,
+T-O-RAN-10,Inconsistent Log Format Impeding Effective Attack Detection,All,"· Lack of Centralized Log Management: Without a centralized system to collect and analyse logs, it's difficult to correlate events across different systems, which can obscure the detection of attack patterns.
+ · Lack of Log Standardization: Different systems generating logs in various formats can lead to inconsistencies in the data, making it difficult to aggregate and analyse logs effectively.
+ · Limited Log Analysis Capabilities: Even with centralized logs, if the analysis tools or processes are not up to the task, potential threats may still go undetected.
+ · Inconsistent Time Synchronization: Without synchronized time across systems, it becomes challenging to correlate log entries accurately, which is crucial for tracking attackers' movements and actions.",All,All,O-RAN specific,
+T-FRHAUL-01,An attacker penetrates O-DU and beyond through O-RU or the Fronthaul interface to access or modify sensitive information,All,Heterogeneous security levels between O-RU and O-DU provided by different vendors,"ASSET-D-01, ASSET-D-02, ASSET-D-04, ASSET-D-05","rApps, xApps, O-RU, O-DU, O-CU, Near-RT RIC, Non-RT RIC",O-RAN specific,Fronthaul Interface
+T-FRHAUL-01A,An attacker penetrates O-DU and beyond through O-RU or the Fronthaul interface to impersonate a legitimate system or user,All,Heterogeneous security levels between O-RU and O-DU provided by different vendors,"ASSET-D-01, ASSET-D-02, ASSET-D-04, ASSET-D-05","rApps, xApps, O-RU, O-DU, O-CU, Near-RT RIC, Non-RT RIC",O-RAN specific,Fronthaul Interface
+T-FRHAUL-02,Unauthorized access to Open Front Haul Ethernet L1 physical layer interface(s) to obtain protected information,All,Lack of authentication and access control to the Open Front Haul Ethernet L1 physical layer interface,"ASSET-D-01, ASSET-D-02, ASSET-D-04, ASSET-D-05","rApps, xApps, O-RU, O-DU, O-CU, Near-RT RIC, Non-RT RIC",O-RAN specific,Fronthaul Interface
+T-FRHAUL-03,Unauthorized access to Open Front Haul Ethernet L1 physical layer interface(s) to disrupt services,All,Lack of authentication and access control to the Open Front Haul Ethernet L1 physical layer interface,"ASSET-D-01, ASSET-D-02, ASSET-D-04, ASSET-D-05","rApps, xApps, O-RU, O-DU, O-CU, Near-RT RIC, Non-RT RIC",O-RAN specific,Fronthaul Interface
+T-MPLANE-01,An attacker attempts to intercept the Fronthaul (MITM) over M Plane to obtain protected information,All,Lack of sufficient security measures in the Fronthaul due to the negative impact on the performance requirements,"ASSET-D-02, ASSET-D-03","Near-RT RIC, Non-RT RIC, O-CU, O-DU, SMO",O-RAN specific,Fronthaul Interface
+T-MPLANE-02,An attacker attempts to intercept the Fronthaul (MITM) over M Plane to alter m-plane data,All,Lack of sufficient security measures in the Fronthaul due to the negative impact on the performance requirements,"ASSET-D-02, ASSET-D-03","Near-RT RIC, Non-RT RIC, O-CU, O-DU, SMO",O-RAN specific,Fronthaul Interface
+T-MPLANE-03,An attacker attempts to intercept the Fronthaul (MITM) over M Plane to disrupt services,All,Lack of sufficient security measures in the Fronthaul due to the negative impact on the performance requirements,"ASSET-D-02, ASSET-D-03","Near-RT RIC, Non-RT RIC, O-CU, O-DU, SMO",O-RAN specific,Fronthaul Interface
+T-SPLANE-01,DoS attack against a Master clock,All,"· Improper process to monitor and manage the performance of the Master clock
+ · ANNOUNCE messages can be sent publicly in clear text",ASSET-D-01,"O-DU, O-RU",O-RAN specific,Fronthaul Interface
+T-SPLANE-02,Impersonation of a Master clock (Spoofing) within a PTP network with a fake ANNOUNCE message,All,"· Inaccurate timing information
+ · Improper synchronization between clocks
+ · ANNOUNCE messages can be sent publicly in clear text",ASSET-D-01,"O-DU, O-RU",O-RAN specific,Fronthaul Interface
+T-SPLANE-03,A Rogue PTP Instance wanting to be a Grand Master,All,"· Inaccurate timing information
+ · Improper synchronization between clocks
+ · ANNOUNCE messages can be sent publicly in clear text",ASSET-D-01,"O-DU, O-RU",O-RAN specific,Fronthaul Interface
+T-SPLANE-04,Selective interception and removal of PTP timing packets,All,"· Inaccurate timing information
+ · Improper synchronization between clocks
+ · ANNOUNCE messages can be sent publicly in clear text",ASSET-D-01,"O-DU, O-RU",O-RAN specific,Fronthaul Interface
+T-SPLANE-05,Packet delay manipulation attack,All,"· Inaccurate timing information
+ · Improper synchronization between clocks
+ · ANNOUNCE messages can be sent publicly in clear text",ASSET-D-01,"O-DU, O-RU",O-RAN specific,Fronthaul Interface
+T-CPLANE-01,Spoofing of DL C-plane messages,All,Lack of authentication could allow an adversary to inject DL C-plane messages,ASSET-D-04,"O-DU, O-RU",O-RAN specific,Fronthaul Interface
+T-CPLANE-02,Spoofing of UL C-plane messages,All,Lack of authentication could allow an adversary to inject UL C-plane messages,ASSET-D-04,"O-DU, O-RU",O-RAN specific,Fronthaul Interface
+T-UPLANE-01,An attacker attempts to intercept the Fronthaul (MITM) over U-Plane to obtain user data,All,Lack of sufficient security measures in the Fronthaul due to the negative impact on the performance requirements,ASSET-D-05,"O-DU, O-RU",O-RAN specific,Fronthaul Interface
+T-UPLANE-02,An attacker attempts to intercept the Fronthaul (MITM) over U-Plane to modify u-plane data,All,Lack of sufficient security measures in the Fronthaul due to the negative impact on the performance requirements,ASSET-D-05,"O-DU, O-RU",O-RAN specific,Fronthaul Interface
+T-UPLANE-03,An attacker attempts to intercept the Fronthaul (MITM) over U-Plane to disrupt services,All,Lack of sufficient security measures in the Fronthaul due to the negative impact on the performance requirements,ASSET-D-05,"O-DU, O-RU",O-RAN specific,Fronthaul Interface
+T-UPLANE-04,Spoofing and unauthorized access of U-Plane data packets,All,"Lack of authentication, and authorization protection for U-Plane data packets",ASSET-D-05,"O-DU, O-RU",O-RAN specific,Fronthaul Interface
+T-ORU-01,An attacker stands up a false base station attack by attacking an O-RU,All,False O-RUs,"ASSET-D-01, ASSET-D-02, ASSET-D-03, ASSET-D-04, ASSET-D-05, ASSET-D-06",O-RU,O-RAN specific,
+T-O-RU-02,An attacker leverages the lack of traceability with shared user accounts,All,"· Identical local user accounts are shared across entities(eg:SMO, O-DU) for concurrent access","ASSET-D-18
+ ASSET-D-20",ASSET-C-06,O-RAN specific,
+T-O-RU-03,An attacker manipulates initial provisioning information,All,· Initial provisioning information from the Software configuration server could be manipulated to point to another server rather than the centralized authentication and authorization server,"ASSET-D-18
+ ASSET-D-20",ASSET-C-06,O-RAN specific,
+T-O-RU-04,"An attacker compromises O-RU user information, data integrity, confidentiality towards an external centralized authentication and authorization server",All,"· O-RU credentials including account information and passwords could be mismanaged, misclassifying O-RU users between centralized and local users which could defeat the purpose of central authentication, authorization and administration
+ · Data in plain text between the O-RU and centralized Authentication and authorization server could be manipulated 
+ · O-RU related credentials can be manipulated if not stored securely",ASSET-D-20,"ASSET-C-06
+  
+ ASSET-C-26",O-RAN specific,
+T-NEAR-RT-01,"Malicious Apps can exploit UE identification, track UE location and change UE priority",All,Malicious xApps may be used to gain access to UE identification location and priority,"ASSET-D-21, ASSET-D-22, ASSET-C-02, ASSET-C-09, ASSET-C-41, ASSET-C-43","Near-RT RIC, xApps, E2 Functions, Y1 Functions",O-RAN specific,
+T-NEAR-RT-02,Risk of a malicious xApp on Near-RT RIC to obtain protected information,All,Improper or missing authentication and authorization of xApps,"ASSET-D-10, ASSET D-11, ASSET D-21, ASSET-D-22","Near-RT RIC, UE, xApps",O-RAN specific,
+T-NEAR-RT-02A,Risk of a malicious xApp on Near-RT RIC impacting service availability,All,Improper or missing authentication and authorization of xApps,"ASSET-D-10, ASSET D-11, ASSET D-21, ASSET-D-22","Near-RT RIC, UE, xApps",O-RAN specific,
+T-NEAR-RT-03,"Attackers exploit non authenticated, weakly or incorrectly authenticated Near-RT RIC APIs to obtain protected information",All,"Non authenticated, weakly or incorrectly authenticated Near-RT RIC APIs","ASSET-D-09, ASSET-D-10, ASSET D-11, ASSET D-20, ASSET-D-21, ASSET-D-25, ASSET-D-26, ASSET-D-29, ASSET-D-30, ASSET-C-02, ASSET-C-09, ASSET-C-41, ASSET-C-43","Near-RT RIC, UE, xApps",O-RAN specific,
+T-NEAR-RT-03A,"Attackers exploit non authenticated, weakly or incorrectly authenticated Near-RT RIC APIs for MiTM attacks",All,"Non authenticated, weakly or incorrectly authenticated Near-RT RIC APIs","ASSET-D-09, ASSET-D-10, ASSET D-11, ASSET D-20, ASSET-D-21, ASSET-D-25, ASSET-D-26, ASSET-D-29, ASSET-D-30, ASSET-C-02, ASSET-C-09, ASSET-C-41, ASSET-C-43","Near-RT RIC, UE, xApps",O-RAN specific,
+T-NEAR-RT-04,"Attackers exploit non authorized Near-RT RIC APIs to access resources and services which they are not entitled to use, to obtain protected information.",All,Non-authorized RT RIC APIs,"ASSET-D-09, ASSET-D-10, ASSET D-11, ASSET D-20, ASSET-D-21, ASSET-D-25, ASSET-D-26, ASSET-D-29, ASSET-D-30, ASSET-C-02, ASSET-C-09, ASSET-C-41, ASSET-C-43","Near-RT RIC, UE, xApps",O-RAN specific,
+T-NEAR-RT-04A,"Attackers exploit non authorized Near-RT RIC APIs to access resources and services which they are not entitled to use, to disrupt services.",All,Non-authorized RT RIC APIs,"ASSET-D-09, ASSET-D-10, ASSET D-11, ASSET D-20, ASSET-D-21, ASSET-D-25, ASSET-D-26, ASSET-D-29, ASSET-D-30, ASSET-C-02, ASSET-C-09, ASSET-C-41, ASSET-C-43","Near-RT RIC, UE, xApps",O-RAN specific,
+T-NEAR-RT-05,Attackers exploit non uniquely identified xApps using a trusted xAppID to access resources and services which they are not entitled to use.,All,Not uniquely identifying xApps using a trusted xAppID,"ASSET-D-39, ASSET-C-02, ASSET-C-09","Near-RT RIC, xApps",O-RAN specific,
+T-NONRTRIC-01,An attacker gains access to the Non-RT RIC through the SMO to cause a denial of service or degrade the performance of the Non-RT-RIC,All,Improper or missing authentication and authorization processes on the Non-RT RIC or SMO,"ASSET-D-03, ASSET-D-07, ASSET-D-08, ASSET-C-11","Non-RT RIC, rApps",O-RAN specific,
+T-NONRTRIC-02,An attacker gains access to the Non-RT RIC through the SMO for UE tracking,All,Malicious rApps may be used to gain access to UE identification,"ASSET-D-21, ASSET-D-22, ASSET-C-11","Non-RT RIC, rApps, UE",O-RAN specific,
+T-NONRTRIC-03,An attacker gains access to the Non-RT RIC through the SMO to cause Data Corruption/Modification,All,Improper or missing authentication and authorization processes on the Non-RT RIC or SMO,ASSET-C-11,Non-RT RIC,O-RAN specific,
+T-NONRTRIC-04,An attacker exploits non uniquely identified rApp instances using a trusted rAppID to access R1 services and data which they are not entitled to use,All,Not uniquely identifying rApp instances using a trusted rAppID,"ASSET-C-10, ASSET-C-11","Non-RT RIC, rApps",O-RAN specific,
+T-xAPP-01,An attacker exploits xApps vulnerabilities and misconfiguration to alter data transmitted over A1 or E2 interfaces.,All,xApp stems from an untrusted or unmaintained source,"ASSET-C-03, ASSET-C-05, ASSET-C-07, ASSET-C-08, ASSET-C-09, ASSET-C-10","O-CU, Near-RT RIC, xApps",O-RAN specific,
+T-xAPP-01A,An attacker exploits xApps vulnerabilities and misconfiguration to extract sensitive information.,All,xApp stems from an untrusted or unmaintained source,"ASSET-C-03, ASSET-C-05 ASSET-C-07, ASSET-C-08, ASSET-C-09, ASSET-C-10","O-CU, Near-RT RIC, xApps",O-RAN specific,
+T-xAPP-01B,An attacker exploits xApps vulnerabilities and misconfiguration to disrupt Near-RT RIC functions,All,xApp stems from an untrusted or unmaintained source,"ASSET-C-03, ASSET-C-05, ASSET-C-07, ASSET-C-08, ASSET-C-09, ASSET-C-10","O-CU, Near-RT RIC, xApps",O-RAN specific,
+T-xAPP-01C,An attacker exploits xApps vulnerabilities and misconfiguration to gain unauthorized control over Near-RT RIC,All,xApp stems from an untrusted or unmaintained source,"ASSET-C-03, ASSET-C-07, ASSET-C-08, ASSET-C-09, ASSET-C-10","O-CU, Near-RT RIC, xApps",O-RAN specific,
+T-xAPP-02,Conflicting xApps impact O-RAN system functions to degrade performance or create a DoS [i.12],All,"· xApps may be misconfigured or compromised
+ · Failing or misconfigured authentication and authorization in xApp","ASSET-C-03, ASSET-C-05, ASSET-C-07, ASSET-C-08, ASSET-C-09, ASSET-C-10","O-CU, Near-RT RIC, xApps",O-RAN specific,
+T-xAPP-03,An attacker compromises xApp isolation,All,Vulnerabilities in the underlying system hosting xApps,"ASSET-C-03, ASSET-C-07, ASSET-C-08, ASSET-C-09, ASSET-C-10","O-CU, Near-RT RIC, xApps",O-RAN specific,
+T-xApp-04,False or malicious A1 policies modify behavior of xApps,All,xApp functionality exploited by malicious A1 policies,"ASSET-D-07, ASSET-D-11, ASSET-C-09","O-CU, O-DU, Near-RT RIC, xApps",O-RAN specific,
+T-rAPP-01,Conflicting rApps impact O-RAN system functions to degrade performance or trigger a DoS,All,rApp stems from an untrusted or unmaintained source,ASSET-C-10,"rApps, Non-RT RIC",O-RAN specific,
+T-rAPP-02,An attacker exploits rApp vulnerability for data breach or denial of service,All,rApp management is exposed to the tenant in a web front-end or REST API. These interfaces may contain software vulnerabilities or implement authentication and authorization insufficiently.,ASSET-C-10,"rApps, Non-RT RIC",O-RAN specific,
+T-rAPP-03,An attacker exploits rApps misconfiguration,All,Vulnerabilities in the underlying system hosting rApps,ASSET-C-10,"rApps, Non-RT RIC",O-RAN specific,
+T-rAPP-04,An attacker bypasses authentication and authorization,All,"· rApps may be misconfigured or compromised
+ · Failing or misconfigured authentication and authorization in rApp",ASSET-C-10,"rApps, Non-RT RIC",O-RAN specific,
+T-rAPP-05,An attacker deploys and exploits malicious rApp,All,"· rApps may be misconfigured or compromised
+ · Failing or misconfigured authentication and authorization in rApp",ASSET-C-10,"rApps, Non-RT RIC",O-RAN specific,
+T-rAPP-06,An attacker bypasses authentication and authorization using an injection attack,All,"· rApps may be misconfigured or compromised
+ · Failing or misconfigured authentication and authorization in rApp",ASSET-C-10,"rApps, Non-RT RIC",O-RAN specific,
+T-rAPP-07,rApp exploits services,All,"· rApps may be misconfigured or compromised
+ · Failing or misconfigured authentication and authorization in rApp",ASSET-C-10,"rApps, Non-RT RIC",O-RAN specific,
+T-PNF-01,An attacker compromises a PNF to launch attacks against VNFs/CNFs,All,Vulnerabilities in a PNF deployed in a PNF-VNF/CNF deployments.,All,All,O-RAN specific,
+T-PNF-01A,An attacker compromises a PNF to launch Denial of Service attacks against VNFs/CNFs,All,Vulnerabilities in a PNF deployed in a PNF-VNF/CNF deployments.,All,All,O-RAN specific,
+T-SMO-01,External attacker exploits authentication weakness on SMO,All,Missing or improperly configured authentication,"ASSET-C-11, ASSET-C-17","Non-RT RIC, SMO Framework",O-RAN specific,
+T-SMO-02,External attacker exploits authorization weakness on SMO,All,Missing or improperly configured authorization,"ASSET-C-11, ASSET-C-17","Non-RT RIC, SMO Framework",O-RAN specific,
+T-SMO-03,External Overload DoS attack targeted at SMO,All,Lack of overload protection and rate-limiting,"ASSET-C-11, ASSET-C-17","Non-RT RIC, SMO Framework",O-RAN specific,
+T-SMO-04,Internal attacker exploits authentication weakness on a SMO function,All,Missing or improperly configured authentication,"ASSET-C-11, ASSET-C-17, ASSET-C-18, ASSET-C-19, ASSET-C-20, ASSET-C_21",All,O-RAN specific,
+T-SMO-05,Internal attacker exploits authorization weakness on a SMO function,All,Missing or improperly configured authorization,"ASSET-C-11, ASSET-C-17, ASSET-C-18, ASSET-C-19, ASSET-C-20, ASSET-C_21",All,O-RAN specific,
+T-SMO-06,Internal Overload DoS attack targeted at SMO functions,All,Lack of overload protection and rate-limiting,"ASSET-C-11, ASSET-C-17, ASSET-C-18, ASSET-C-19, ASSET-C-20, ASSET-C_21",All,O-RAN specific,
+T-SMO-07,Internal DoS attack disables internal SMO function(s) or process(es),All,Privilege escalation or improperly configured authorization,"ASSET-C-11, ASSET-C-17, ASSET-C-18, ASSET-C-19, ASSET-C-20, ASSET-C_21",All,O-RAN specific,
+T-SMO-08,Attacker exploits insecure API to gain access to SMO,All,API vulnerability,"ASSET-C-11, ASSET-C-17, ASSET-C-18, ASSET-C-19, ASSET-C-20, ASSET-C_21",All,O-RAN specific,
+T-SMO-09,Sensitive data in transit is exposed to an internal attacker,All,Missing or weak confidentiality protection of data in transit,"ASSET-C-11, ASSET-C-17, ASSET-C-18, ASSET-C-19, ASSET-C-20, ASSET-C_21",All,O-RAN specific,
+T-SMO-10,Sensitive data at rest is exposed to an internal attacker,All,Missing or weak confidentiality protection of data at rest,"ASSET-C-11, ASSET-C-17, ASSET-C-18, ASSET-C-19, ASSET-C-20, ASSET-C_21",All,O-RAN specific,
+T-SMO-11,AI/ML poisoning by internal attacker,All,Missing integrity protection of data at rest,"ASSET-C-11, ASSET-C-17","Non-RT RIC, SMO Froamework",O-RAN specific,
+T-SMO-12,AI/ML exposure on external entity,All,Missing or weak confidentiality protection of data at rest,"ASSET-C-11, ASSET-C-17","Non-RT RIC, SMO Framework",O-RAN specific,
+T-SMO-13,Malicious actor views local logs,All,Missing or weak confidentiality protection of data at rest,"ASSET-C-17, ASSET-C-18","SMO Framework, SMO Functions",O-RAN specific,
+T-SMO-14,Malicious actor modifies local log entries,All,Missing integrity protection of data at rest,"ASSET-C-17, ASSET-C-18","SMO Framework, SMO Functions",O-RAN specific,
+T-SMO-15,Malicious actor deletes local logs,All,Missing integrity protection of data at rest,"ASSET-C-17, ASSET-C-18","SMO Framework, SMO Functions",O-RAN specific,
+T-SMO-16,Malicious actor intercepts exports of local logs,All,Missing or weak confidentiality protection of data in transit,"ASSET-C-17, ASSET-C_18, ASSET-C-26","SMO Framework, SMO Functions, External interfaces",O-RAN specific,
+T-SMO-17,Malicious external actor gains unauthorized access to logs,All,Missing or improperly configured authorization,"ASSET-C-17, ASSET-C-18","SMO Framework, SMO Functions",O-RAN specific,
+T-SMO-18,Malicious internal actor gains authorized access to logs,All,Missing or improperly configured authorization,"ASSET-C-17, ASSET-C-18","SMO Framework, SMO Functions",O-RAN specific,
+T-SMO-19,Internal attacker exploits O2 interface to view data in transit between SMO and O-Cloud,All,Missing or weak confidentiality protection of data in transit,"ASSET-C_08, ASSET-C-17, ASSET-C-23","O-Cloud, SMO, O2 interface",O-RAN specific,
+T-SMO-20,Internal attacker exploits O2 interface to modify data in transit between SMO and O-Cloud,All,Missing integrity checking for data in transit,"ASSET-C_08, ASSET-C-17, ASSET-C-23","O-Cloud, SMO, O2 interface",O-RAN specific,
+T-SMO-21,Internal attacker uses O2 interface via SMO to exploit API vulnerability to gain access to O-Cloud infrastructure,All,API vulnerability,"ASSET-C_08, ASSET-C-17, ASSET-C-23","O-Cloud, SMO, O2 interface",O-RAN specific,
+T-SMO-22,Internal attacker floods O2 interface via SMO to cause DDoS on O-Cloud infrastructure,All,Lack of overload protection and rate-limiting,"ASSET-C-08, ASSET-C-17, ASSET-C-23","O-Cloud, SMO, O2 interface",O-RAN specific,
+T-SMO-23,External attacker uses O2 interface via O-Cloud to exploit API vulnerability to gain access to SMO,All,API vulnerability,"ASSET-C_08, ASSET-C-17, ASSET-C-23","O-Cloud, SMO, O2 interface",O-RAN specific,
+T-SMO-24,External attacker floods O2 interface via O-Cloud to cause DDoS on SMO,All,Lack of overload protection and rate-limiting,"ASSET-C_08, ASSET-C-17, ASSET-C-23","O-Cloud, SMO, O2 interface",O-RAN specific,
+T-SMO-25,External attacker uses O2 interface via O-Cloud to gain authorized access to sensitive data-at-rest at the SMO,All,Missing or improperly configured authorization,"ASSET-C_08, ASSET-C-17, ASSET-C-23","O-Cloud, SMO, O2 interface",O-RAN specific,
+T-SMO-26,External attacker exploits External interface to view data in transit between SMO and external service,All,Missing or weak confidentiality protection of data in transit,"ASSET-C_11, ASSET-C-17, ASSET-C-26","Non-RT RIC, SMO, External interfaces",O-RAN specific,
+T-SMO-27,External attacker exploits External interface to modify data in transit between SMO and external service,All,Missing integrity checking for data in transit,"ASSET-C_11, ASSET-C-17, ASSET-C-26","Non-RT RIC, SMO, External interfaces",O-RAN specific,
+T-SMO-28,External attacker uses External interface to exploit API vulnerability to gain access to SMO,All,API vulnerability,"ASSET-C_11, ASSET-C-17, ASSET-C-26","Non-RT RIC, SMO, External interfaces",O-RAN specific,
+T-SMO-29,External attacker floods External interface to cause DDoS at SMO,All,Lack of overload protection and rate-limiting,"ASSET-C_11, ASSET-C-17, ASSET-C-26, ASSET-C_27, ASSET-C-28",All,O-RAN specific,
+T-SMO-30,External attacker uses External interface to gain access to sensitive data-at-rest at the SMO,All,Missing or improperly configured authorization,"ASSET-C_11, ASSET-C-17, ASSET-C-26","Non-RT RIC, SMO, External interfaces",O-RAN specific,
+T-SMO-31,External attacker poisons External AI/ML data to corrupt SMO,All,Missing integrity checking for data at rest,"ASSET-C_11, ASSET-C-17, ASSET-C-26","Non-RT RIC, SMO, External interfaces",O-RAN specific,
+T-SMO-32,External attacker poisons External Enrichment Information data sources to corrupt SMO,All,Missing integrity checking for data at rest,"ASSET-C_11, ASSET-C-17, ASSET-C-26","Non-RT RIC, SMO, External interfaces",O-RAN specific,
+T-R1-01,A malicious actor gains unauthorized access to R1 services,All,weak mutual authentication,ASSET-C-16,R1 interface,O-RAN specific,
+T-R1-02,Attacker modifies Service Heartbeat message to cause Denial of Service,All,weak mutual authentication,ASSET-C-16,R1 interface,O-RAN specific,
+T-R1-03,Malicious actor bypasses authentication to Request Data,All,weak mutual authentication,ASSET-C-16,R1 interface,O-RAN specific,
+T-R1-04,Malicious actor bypasses authorization to Discover Data,All,weak mutual authentication,ASSET-C-16,R1 interface,O-RAN specific,
+T-R1-05,A malicious actor gains unauthorized access to data,All,weak mutual authentication,ASSET-C-16,R1 interface,O-RAN specific,
+T-R1-06,Malicious actor modifies a Data Request,All,weak mutual authentication,ASSET-C-16,R1 interface,O-RAN specific,
+T-R1-07,Malicious actor compromises Data Delivery to the Data Consumer,All,weak mutual authentication,ASSET-C-16,R1 interface,O-RAN specific,
+T-A1-01,Untrusted peering between Non-RT-RIC and Near-RT-RIC,All,weak mutual authentication,ASSET-C-14,A1 interface,O-RAN specific,
+T-A1-02,Malicious function or application monitors messaging across A1 interface,All,weak mutual authentication,ASSET-C-14,A1 interface,O-RAN specific,
+T-A1-03,Malicious function or application modifies messaging across A1 interface,All,weak mutual authentication,ASSET-C-14,A1 interface,O-RAN specific,
+T-A1-04,Unauthorized access to Non-RT-RIC- or Near-RT-RIC- resources,All,weak service consumer authorization,"ASSET-D-07, ASSET-D-08",A1 interface,O-RAN specific,
+T-AppLCM-01,Compromise of App/VNF/CNF update package integrity during onboarding,All,Lack of integrity verification,ASSET-D-15,Apps/VNFs/CNFs,O-RAN specific,
+T-AppLCM-02,Compromise of App/VNF/CNF update image integrity during instantiation,All,Lack of integrity verification,ASSET-D-15,Apps/VNFs/CNFs images,O-RAN specific,
+T-AppLCM-03,Downgrade attack to vulnerable application version,All,Lack of integrity verification,ASSET-D-15,Apps/VNFs/CNFs,O-RAN specific,
+T-AppLCM-04,Attacker exploits missing or improperly defined elements of application’s SecurityDescriptor,All,Misconfiguration,ASSET-D-15,Apps/VNFs/CNFs,O-RAN specific,
+T-AppLCM-05,Malicious actor modifies application’s SecurityDescriptor,All,"Lack of authentication, lack of integrity verification",ASSET-D-15,Apps/VNFs/CNFs,O-RAN specific,
+T-AppLCM-06,Improper decommissioning of application,All,Improper release of resources and secrets,ASSET-D-15,Apps/VNFs/CNFs,O-RAN specific,
+T-AppLCM-07,Improper deletion of application sensitive data,All,Missing or weak confidentiality protection,"ASSET-D-16, ASSET-D-17, ASSET-D-32",Apps/VNFs/CNFs,O-RAN specific,
+T-SharedORU-01,O-DU Tenant accesses O-DU Host,All,Weak authentication can be exploited by a tenant to move laterally across the deployment.,ASSET-C-34,O-DU Host,O-RAN specific,
+T-SharedORU-02,O-DU Host accesses O-DU Tenant,All,Weak authentication can be exploited by a host to move laterally across the deployment.,ASSET-C-35,O-DU Tenant,O-RAN specific,
+T-SharedORU-03,O-DU Tenant accesses O-DU Tenant,All,Weak authentication can be exploited by a tenant to move laterally across the deployment.,ASSET-C-35,O-DU Tenant,O-RAN specific,
+T-SharedORU-04,Password Attack on OFH M-Plane,All,The attack can be a brute-force attack or stolen password. There is increased risk of password attack in a multi-tenant environment.,"ASSET-C-31, ASSET-C-34, ASSET-C-35","Shared O-RU, O-DU Host, O-DU Tenant",O-RAN specific,
+T-SharedORU-05,Untrusted peering to O-DU,All,"Attacker exploits weak authentication on the O-DU to establish a session with a malicious app masquerading as a Shared O-RU. From the O-DU, a malicious actor can move laterally.","ASSET-C-34, ASSET-C-35","O-DU Host, O-DU Tenant",O-RAN specific,
+T-SharedORU-06,Untrusted peering to the Shared O-RU,All,Weak authentication can be exploited to establish session with a malicious app masquerading as a O-DU Host or O-DU Tenant,ASSET-C-31,Shared O-RU,O-RAN specific,
+T-SharedORU-07,Untrusted peering to the SMO,All,Weak authentication on the SMO can be exploited to establish session with a malicious app masquerading as a Shared O-RU.,ASSET-C-31,Shared O-RU,O-RAN specific,
+T-SharedORU-08,SMO Tenant accesses SMO Host,All,Weak authentication can be exploited by a tenant to move laterally across the deployment.,ASSET-C-38,SMO Host,O-RAN specific,
+T-SharedORU-09,SMO Host accesses SMO Tenant,All,Weak authentication can be exploited by a tenant to move laterally across the deployment.,ASSET-C-39,SMO Tenant,O-RAN specific,
+T-SharedORU-10,O-DU Host accesses O-CU Tenant,All,Weak authentication can be exploited by a tenant to move laterally across the deployment.,ASSET-C-37,O-CU Tenant,O-RAN specific,
+T-SharedORU-11,O-DU Tenant accesses O-CU Host,All,Weak authentication can be exploited by a tenant to move laterally across the deployment.,ASSET-C-36,O-CU Host,O-RAN specific,
+T-SharedORU-12,O-DU Tenant accesses O-CU Tenant,All,Weak authentication can be exploited by a tenant to move laterally across the deployment.,ASSET-C-37,O-CU Tenant,O-RAN specific,
+T-SharedORU-13,SMO Host accesses O-CU Tenant,All,Weak authentication can be exploited by a tenant to move laterally across the deployment.,ASSET-C-37,O-CU Tenant,O-RAN specific,
+T-SharedORU-14,SMO Tenant accesses O-CU Host,All,Weak authentication can be exploited by a tenant to move laterally across the deployment.,ASSET-C-36,O-CU Host,O-RAN specific,
+T-SharedORU-15,Physical port access to Shared O-RU Host/Tenant,All,Weak physical layer authentication can be exploited to gain access.,ASSET-C-31,Shared O-RU,O-RAN specific,
+T-SharedORU-16,Physical port access to O-DU Host/Tenant,All,Weak physical layer authentication can be exploited to gain access.,"ASSET-C-34, ASSET-C-35","O-DU Host, O-DU Tenant",O-RAN specific,
+T-SharedORU-17,Physical port access to O-CU Host/Tenant,All,Weak physical layer authentication can be exploited to gain access.,"ASSET-C-36, ASSET-C-37","O-CU Host, O-CU Tenant",O-RAN specific,
+T-SharedORU-18,Malicious User Login Attempt to SMO Host/Tenant,All,Weak account management and/or authentication can be exploited to gain access.,"ASSET-C-38, ASSET-C-39","SMO Host, SMO Tenant",O-RAN specific,
+T-SharedORU-19,Malicious User Login Attempt to O-CU Host/Tenant,All,Weak account management and/or authentication can be exploited to gain access,"ASSET-C-36, ASSET-C-37","O-CU Host, O-CU Tenant",O-RAN specific,
+T-SharedORU-20,Malicious User Login Attempt to O-DU Host/Tenant,All,Weak account management and/or authentication can be exploited to gain access,"ASSET-C-32, ASSET-C-33","O-DU Host, O-DU Tenant",O-RAN specific,
+T-SharedORU-21,Malicious User Login Attempt to Shared O-RU Host/Tenant,All,Weak account management and/or authentication can be exploited to gain access,ASSET-C-31,Shared O-RU,O-RAN specific,
+T-SharedORU-22,Unauthorized internal threat actor gains access to data in Shared O-RU,All,Compromised credentials or weak or misconfigured authorization to gain access to view or modify sensitive data,ASSET-C-31,Shared O-RU,O-RAN specific,
+T-SharedORU-23,Unauthorized external threat actor gains access to data in Shared O-RU,All,Compromised credentials or weak or misconfigured authorization to gain access to view or modify sensitive data,ASSET-C-31,Shared O-RU,O-RAN specific,
+T-SharedORU-24,Data exposure at Shared O-RU,All,Weak confidentiality protection exploited to view sensitive data,ASSET-C-31,Shared O-RU,O-RAN specific,
+T-SharedORU-25,Shared O-RU data exposure at SMO,All,Weak confidentiality protection exploited to view sensitive data,ASSET-C-31,Shared O-RU,O-RAN specific,
+T-SharedORU-26,Shared O-RU data exposure at O-DU,All,Weak confidentiality protection exploited to view sensitive data,ASSET-C-31,Shared O-RU,O-RAN specific,
+T-SharedORU-27,Exposed data in transit between Shared O-RU and O-DU Host/Tenant,All,Weak confidentiality protection exploited to view sensitive data,"ASSET-C-31, ASSET-C-24, ASSET-C-25","Shared O-RU, M-Plane, CUS-Plane",O-RAN specific,
+T-SharedORU-28,Exposed data in transit between Shared O-RU and SMO Host/Tenant,All,Weak confidentiality protection exploited to view sensitive data,"ASSET-C-31, ASSET-C-22","Shared O-RU, O1",O-RAN specific,
+T-SharedORU-29,Modify/Delete OFH C-Plane messages,All,Weak integrity protection exploited to modify or delete control messages,"ASSET-C-31, ASSET-C_34, ASSET-C-35, ASSET-C-25","Shared O-RU, O-DU Host, O-DU Tenant, CUS-Plane",O-RAN specific,
+T-SharedORU-30,Clock hijacking on OFH S-Plane,All,Weak authorization exploit can also result in spoofing of the Grand Master clock for an availability attack,"ASSET-C-31, ASSET-C_34, ASSET-C-35, ASSET-C-25","Shared O-RU, O-DU Host, O-DU Tenant, CUS-Plane",O-RAN specific,
+T-SharedORU-31,Parameter conflicts at Shared O-RU,All,Conflicting parameter settings degrade performance or cause an outage.,ASSET-C-31,Shared O-RU,O-RAN specific,
+T-SharedORU-32,Volumetric DDoS attack from O-DU targeting Shared O-RU,All,"High-rate of malformed, mis-sequenced, invalid, or valid packets to cause a Denial of Service","ASSET-C-31, ASSET-C-24, ASSET-C-25","Shared O-RU, M-Plane, CUS-Plane",O-RAN specific,
+T-SharedORU-33,Volumetric DDoS attack from SMO targeting Shared O-RU,All,"High-rate of malformed, mis-sequenced, invalid, or valid packets to cause a Denial of Service","ASSET-C-31, ASSET-C-22","Shared O-RU, O1",O-RAN specific,
+T-SharedORU-34,Volumetric DDoS attack targeting O-DU,All,"High-rate of malformed, mis-sequenced, invalid, or valid packets to cause a Denial of Service","ASSET-C_34, ASSET-C-35, ASSET-C-24, ASSET-C-25","O-DU Host, O-DU Tenant, M-Plane, CUS-Plane",O-RAN specific,
+T-SharedORU-35,Shared O-RU initialization hijacking by DHCP compromise,All,Compromise DHCP server and use it to prevent Shared O-RU from reaching carrier-active state causing a Denial of Service,ASSET-C-31,Shared O-RU,O-RAN specific,
+T-SharedORU-36,Shared O-RU M-plane hijacking by DNS compromise,All,The name resolution of FQDN can be manipulated by an attacker using a compromised DNS server and prevent Shared O-RU from reaching carrier-active state causing a Denial of Service,ASSET-C-31,Shared O-RU,O-RAN specific,
+T-SharedORU-37,Misconfiguration of MNO Host Role,All,A threat actor could exploit an incorrectly assigned role of Host to control function of the Shared O-RU,ASSET-C-31,Shared O-RU,O-RAN specific,
+T-SharedORU-38,Incorrect Assignment of Spectrum Resources,All,"Tenant access to the wrong resources, due to malicious intent or could be exploited to gain access to information.",ASSET-C-31,Shared O-RU,O-RAN specific,
+T-SharedORU-39,Chain of Trust in a Multi-Tenant Environment,All,Untrustworthy certificates can be exploited to gain access to the Shared O-RU,"ASSET-C-31, ASSET-C-34, ASSET-C-35, ASSET-C-36, ASSET-C_37, ASSET-C-38, ASSET-C-39","Shared O-RU, O-DU Host, O-DU Tenant, O-CU Host, O-CU Tenant, SMO Host, SMO Tenant",O-RAN specific,
+T-SharedORU-40,Hijack of MNO Host Role,All,"Elevation of privilege enables the tenant, acting as host, to have authorized access to sensitive data, credentials, and system privileges",ASSET-C-31,Shared O-RU,O-RAN specific,
+T-SharedORU-41,Not Released Host Role (Host Role resume),All,"Elevation of privilege enables the tenant, acting as host, to have authorized access to sensitive data, credentials, and system privileges",ASSET-C-31,Shared O-RU,O-RAN specific,
+T-SharedORU-42,Misuse of “sudo” privileges,All,"Elevation of privilege enables the tenant, acting as host, to have authorized access to sensitive data, credentials, and system privileges",ASSET-C-31,Shared O-RU,O-RAN specific,
+T-SharedORU-43,Eavesdropping of unprotected CUSM-plane data within shared O-RU,All,Eavesdrop sensitive data between neighbor tenants and the host,ASSET-C-31,Shared O-RU,O-RAN specific,
+T-SharedORU-52,Thrashing O-DU Failovers,All,Threat actor spoofs SMO to cause O-DU-1 and O-DU-2 to thrash between Active state and Standby state,"ASSET-C-34, ASSET-C-22","O-DU, O1",O-RAN specific,
+T-SharedORU-53,Dual (Dueling) Active O-DUs,All,Threat actor spoofs SMO to cause O-DU-1 and O-DU-2 to both be in Active state.,"ASSET-C-34, ASSET-C-22","O-DU, O1",O-RAN specific,
+T-SharedORU-54,Modify/Inject O1 messages at the SMO,All,"Threat actor spoofs O-DU to modify, inject, flood O1 messages to the SMO to prevent SMO detection of O-DU failure.","ASSET-C-38, ASSET-C-22","SMO, O1",O-RAN specific,
+T-SharedORU-55,Set Incorrect Array-Carrier configuration on O-DU (Standby),All,Threat actor spoofs SMO to set or modify the pre-configured array-carrier configuration on the O-DU in Standby state.,"ASSET-C-34, ASSET-C-22","O-DU, O1",O-RAN specific,
+T-SharedORU-56,Modify Array-Carrier pre-configuration on Shared O-RU,All,Threat actor can gain access to Shared O-RU to modify its pre-configured array-carrier,ASSET-C-31,Shared O-RU,O-RAN specific,
+T-SharedORU-57,Modify/Inject M-Plane messages with Array-Carrier configuration,All,Threat actor Modifies/Injects M-Plane messages with Array-Carrier configuration sent to the Shared O-RU.,"ASSET-C-31, ASSET-C-24","Shared O-RU, M-Plane",O-RAN specific,
+T-GEN-01,Software flaw attack,All,"Vulnerable code exploits, Design Weakness","ASSET-D-12, ASSET-D-13, ASSET-D-14, ASSET-D-15, ASSET-D-16, ASSET-D-17, ASSET-D-18, ASSET-D-19, ASSET-D-20, ASSET-D-29, ASSET-D-31, ASSET-D-32","O-Cloud, Apps/VNFs/CNFs",General,
+T-GEN-02,Malicious access to exposed services using valid accounts,All,Lack of authentication,"ASSET-D-12, ASSET-D-13, ASSET-D-14, ASSET-D-15, ASSET-D-16, ASSET-D-17, ASSET-D-18, ASSET-D-19, ASSET-D-20, ASSET-D-29, ASSET-D-31, ASSET-D-32","O-Cloud, Apps/VNFs/CNFs",General,
+T-GEN-03,Untrust binding between the different O-Cloud layers,All,Lack of integrity verification during boot or runtime,"ASSET-D-12, ASSET-D-13, ASSET-D-14, ASSET-D-15, ASSET-D-16, ASSET-D-17, ASSET-D-18, ASSET-D-19, ASSET-D-20, ASSET-D-29, ASSET-D-31, ASSET-D-32","O-Cloud, Apps/VNFs/CNFs",General,
+T-GEN-04,Lack of Authentication & Authorization in interfaces between O-Cloud components,All,"Lack of authentication, Insecure interfaces","ASSET-D-12, ASSET-D-13, ASSET-D-14, ASSET-D-15, ASSET-D-16, ASSET-D-17, ASSET-D-18, ASSET-D-19, ASSET-D-20, ASSET-D-29, ASSET-D-31, ASSET-D-32","O-Cloud, Apps/VNFs/CNFs, O2",General,
+T-GEN-05,Unsecured credentials and keys,All,"Insecure O-Cloud APIs, Lack of integrity verification during boot or runtime","ASSET-D-12, ASSET-D-13, ASSET-D-14, ASSET-D-15, ASSET-D-16, ASSET-D-17, ASSET-D-18, ASSET-D-19, ASSET-D-20, ASSET-D-29, ASSET-D-31, ASSET-D-32",O-Cloud,General,
+T-GEN-06,Sensitive application data cache exploitation,All,"Sensitive information disclosure, Privilege escalation in Applications","ASSET-D-12, ASSET-D-13, ASSET-D-14, ASSET-D-15, ASSET-D-16, ASSET-D-17, ASSET-D-18, ASSET-D-19, ASSET-D-20, ASSET-D-29, ASSET-D-31, ASSET-D-32","O-Cloud, Apps/VNFs/CNFs",General,
+T-VM-C-01,Abuse of a privileged VM/Container,All,Misconfiguration or Insecure VM/Container configurations,"ASSET-D-12, ASSET-D-13, ASSET-D-14, ASSET-D-15, ASSET-D-16, ASSET-D-17, ASSET-D-18, ASSET-D-19, ASSET-D-20, ASSET-D-29, ASSET-D-31, ASSET-D-32","O-Cloud, Apps/VNFs/CNFs",General,
+T-VM-C-02,VM/Container escape attack,All,"Shared tenancy vulnerabilities (multitenant environment), Lack of strong VM/Container isolation, lack of authentication, Insecure networking, Unrestricted communication between VMs/Containers","ASSET-D-12, ASSET-D-13, ASSET-D-14, ASSET-D-15, ASSET-D-16, ASSET-D-17, ASSET-D-18, ASSET-D-19, ASSET-D-20, ASSET-D-29, ASSET-D-31, ASSET-D-32","O-Cloud, Apps/VNFs/CNFs",General,
+T-VM-C-03,VM/Container data theft,All,"Lack of authentication, insecure data storage","ASSET-D-12, ASSET-D-13, ASSET-D-14, ASSET-D-15, ASSET-D-16, ASSET-D-17, ASSET-D-18, ASSET-D-19, ASSET-D-20, ASSET-D-29, ASSET-D-31, ASSET-D-32","O-Cloud, Apps/VNFs/CNFs",General,
+T-VM-C-04,VM/Container migration attacks,All,"Host misconfiguration, lack of authentication, memory pages copied in clear, vulnerable code exploits","ASSET-D-12, ASSET-D-13, ASSET-D-14, ASSET-D-15, ASSET-D-16, ASSET-D-17, ASSET-D-18, ASSET-D-19, ASSET-D-20, ASSET-D-29, ASSET-D-31, ASSET-D-32","O-Cloud, Apps/VNFs/CNFs",General,
+T-VM-C-05,Changing virtualization resource without authorization,All,"Insecure O1/O2 interfaces, Lack of authentication/access control on IMS/DMS","ASSET-D-12, ASSET-D-13, ASSET-D-14, ASSET-D-15, ASSET-D-16, ASSET-D-17, ASSET-D-18, ASSET-D-19, ASSET-D-20, ASSET-D-29, ASSET-D-31, ASSET-D-32","O-Cloud, Apps/VNFs/CNFs",General,
+T-VM-C-06,Failed or incomplete VNF/CNF termination or releasing of resources,All,"Lack of authentication, misconfigurations (VNF/CNF, Host OS, Hypervisor/Container Engine)","ASSET-D-12, ASSET-D-13, ASSET-D-14, ASSET-D-15, ASSET-D-16, ASSET-D-17, ASSET-D-18, ASSET-D-19, ASSET-D-20, ASSET-D-29, ASSET-D-31, ASSET-D-32","O-Cloud, Apps/VNFs/CNFs",General,
+T-IMG-01,VM/Container images tampering,All,"Compromised VM/Container images (Build machine attacks, Supply chain attacks) at rest, lack of authentication, misconfiguration or Insecure VM/Container images configurations","ASSET-D-12, ASSET-D-13, ASSET-D-14, ASSET-D-15, ASSET-D-16, ASSET-D-17, ASSET-D-18, ASSET-D-19, ASSET-D-20, ASSET-D-29, ASSET-D-31, ASSET-D-32","O-Cloud, Apps/VNFs/CNFs images",General,
+T-IMG-02,Insecure channels with images repository,All,Compromised VM/Container images in transit,"ASSET-D-12, ASSET-D-13, ASSET-D-14, ASSET-D-15, ASSET-D-16, ASSET-D-17, ASSET-D-18, ASSET-D-19, ASSET-D-20, ASSET-D-29, ASSET-D-31, ASSET-D-32","O-Cloud, Apps/VNFs/CNFs images",General,
+T-IMG-03,Secrets disclosure in VM/Container images,All,Secret exposure in VNF/CNF images,"ASSET-D-12, ASSET-D-13, ASSET-D-14, ASSET-D-15, ASSET-D-16, ASSET-D-17, ASSET-D-18, ASSET-D-19, ASSET-D-20, ASSET-D-29, ASSET-D-31, ASSET-D-32","O-Cloud, Apps/VNFs/CNFs images",General,
+T-IMG-04,Build image on VL,All,"Host misconfiguration, lack of authentication","ASSET-D-12, ASSET-D-13, ASSET-D-14, ASSET-D-15, ASSET-D-16, ASSET-D-17, ASSET-D-18, ASSET-D-19, ASSET-D-20, ASSET-D-29, ASSET-D-31, ASSET-D-32","O-Cloud, Apps/VNFs/CNFs images",General,
+T-VL-01,VM/Container hyperjacking attack,All,"Host misconfiguration, lack of authentication","ASSET-D-12, ASSET-D-13, ASSET-D-14, ASSET-D-15, ASSET-D-16, ASSET-D-17, ASSET-D-18, ASSET-D-19, ASSET-D-20, ASSET-D-29, ASSET-D-31, ASSET-D-32","O-Cloud, Apps/VNFs/CNFs",General,
+T-VL-02,Boot tampering,All,"Host misconfigurations, lack of authentication","ASSET-D-12, ASSET-D-13, ASSET-D-14, ASSET-D-15, ASSET-D-16, ASSET-D-17, ASSET-D-18, ASSET-D-19, ASSET-D-20, ASSET-D-29, ASSET-D-31, ASSET-D-32","O-Cloud, Apps/VNFs/CNFs",General,
+T-VL-03,Attack internal network services,All,"Insecure O-Cloud APIs, Lack of authentication","ASSET-D-12, ASSET-D-13, ASSET-D-14, ASSET-D-15, ASSET-D-16, ASSET-D-17, ASSET-D-18, ASSET-D-19, ASSET-D-20, ASSET-D-29, ASSET-D-31, ASSET-D-32",O-Cloud,General,
+T-O2-01,MitM attacks on O2 interface between O-Cloud and SMO,All,"Insecure O2 interface, lack authentication","ASSET-D-12, ASSET-D-13, ASSET-D-14, ASSET-D-15, ASSET-D-16, ASSET-D-17, ASSET-D-18, ASSET-D-19, ASSET-D-20, ASSET-D-29, ASSET-D-31, ASSET-D-32",O2,General,
+T-OCAPI-01,MitM attacks on O-Cloud interface between VNFs/CNFs and the virtualization layer,All,"Insecure O-Cloud APIs, lack of authentication","ASSET-D-12, ASSET-D-13, ASSET-D-14, ASSET-D-15, ASSET-D-16, ASSET-D-17, ASSET-D-18, ASSET-D-19, ASSET-D-20, ASSET-D-29, ASSET-D-31, ASSET-D-32","O-Cloud, Apps/VNFs/CNFs",General,
+T-HW-01,Cross VM/Container side channel attacks,All,"Flaws in chip design, use of shared hardware, Lack of isolation, lack of authentication","ASSET-D-12, ASSET-D-13, ASSET-D-14, ASSET-D-15, ASSET-D-16, ASSET-D-17, ASSET-D-18, ASSET-D-19, ASSET-D-20, ASSET-D-29, ASSET-D-31, ASSET-D-32","O-Cloud, Apps/VNFs/CNFs",General,
+T-HW-02,MitM attacks on the interface between virtualization layer and hardware,All,"Insecure interfaces between HW and VL layers, lack of authentication, misconfiguration","ASSET-D-12, ASSET-D-13, ASSET-D-14, ASSET-D-15, ASSET-D-16, ASSET-D-17, ASSET-D-18, ASSET-D-19, ASSET-D-20, ASSET-D-29, ASSET-D-31, ASSET-D-32",O-Cloud,General,
+T-ADMIN-01,Denial of service against NFO/FOCOM,All,"Lack of authentication, vulnerable code exploits, design weakness, insecure O2 interface","ASSET-D-12, ASSET-D-13, ASSET-D-14, ASSET-D-15, ASSET-D-16, ASSET-D-17, ASSET-D-18, ASSET-D-19, ASSET-D-20, ASSET-D-29, ASSET-D-31, ASSET-D-32","NFO/FOCOM, O-Cloud, Apps/VNFs/CNFs",General,
+T-ADMIN-02,Abuse a O-Cloud administration service,All,"Lack of authentication, secret exposure (insufficient safeguarding of credentials), vulnerable code exploits, design weakness","ASSET-D-12, ASSET-D-13, ASSET-D-14, ASSET-D-15, ASSET-D-16, ASSET-D-17, ASSET-D-18, ASSET-D-19, ASSET-D-20, ASSET-D-29, ASSET-D-31, ASSET-D-32","NFO/FOCOM, O-Cloud, Apps/VNFs/CNFs",General,
+T-AAL-01,Attacker exploits insecure API to gain access to hardware accelerator resources,All,"Insecure AAL APIs and interfaces
+ Lack authentication and authorization",ASSET-D-33 to ASSET-D-38,"ASSET-C-29, ASSET-C-30",General,
+T-AAL-02,Internal Overload DoS attack targeting AAL services,All,"Insecure AAL APIs and interfaces 
+ Lack authentication and authorization",ASSET-D-33 to ASSET-D-38,"ASSET-C-29, ASSET-C-30",General,
+T-AAL-03,Fail to clear resources,All,"Insecure AAL APIs
+ Flaws in AAL design
+ Lack of secure deletion of data after process termination",ASSET-D-33 to ASSET-D-38,"ASSET-C-29, ASSET-C-30",General,
+T-AAL-04,HAM compromise,All,"Insecure HAM APIs
+ Flaws in HAM design
+ Lack of access control",ASSET-D-33 to ASSET-D-38,"ASSET-C-29, ASSET-C-30",General,
+T-AAL-05,Malicious memory accesses,All,"Insecure AAL APIs
+ Flaws in AAL design
+ Unrestricted memory access
+ Lack of access control",ASSET-D-33 to ASSET-D-38,"ASSET-C-29, ASSET-C-30",General,
+T-AAL-06,Firmware attacks,All,"Weak accelerator design
+ Misconfiguration
+ Insecure AAL/HAM APIs",ASSET-D-33 to ASSET-D-38,"ASSET-C-29, ASSET-C-30",General,
+T-O-CLOUD-ID-01,ID reuse in O-Cloud's object lifecycle,All,"Insufficient data cleanup
+ Weak isolation mechanisms
+ Inadequate monitoring and Logging
+ Lack of ID randomization
+ Inefficient access controls
+ No Timestamping or Versioning
+ Lack of notification mechanisms","ASSET-D-14, ASSET-D-15, ASSET-D-18, ASSET-D-29",ASSET-C-08,General,
+T-O-CLOUD-ID-02,Node redundancy in O-Cloud deployments,All,"Inadequate decommissioning procedures
+ Weak identity management
+ Insufficient data cleanup
+ No state verification
+ Lack of Resource Auditing
+ Lack of notification mechanisms
+ Inadequate monitoring and Logging","ASSET-D-14, ASSET-D-15, ASSET-D-18, ASSET-D-29",ASSET-C-08,General,
+T-O-CLOUD-ID-03,O-Cloud ID mismanagement,All,"Predictable ID Generation
+ Lack of ID validation
+ Inefficient synchronization
+ No ID revocation mechanism
+ Inadequate access controls
+ Lack of Namespace Segregation","ASSET-D-14, ASSET-D-15, ASSET-D-18, ASSET-D-29",ASSET-C-08,General,
+T-OPENSRC-01,Developers use SW components with known vulnerabilities and untrusted libraries that can be exploited by an attacker through a backdoor attack,All,"· Inaccurate inventories of open-source software
+ · Lack of consistent Supply Chain traceability and security
+ · Lack of coding best practices
+ · Modules with known vulnerabilities and untrusted libraries",All,All,General,
+T-OPENSRC-02,A trusted developer intentionally inserts a backdoor into an open source code O-RAN component,All,Bugs in open source software caused by mistakes and human error,All,All,General,
+T-PHYS-01,An intruder into a site gains physical access to O-RAN components to cause damage or access sensitive data,All except Script kiddies,"· Improper physical security protection of data centres, PNFs, operation areas, etc.
+ · Improper protection to power outages (power supply)
+ · Improper protection against environmental disasters
+ · Improper maintenance and monitoring of hardware parameters
+ · Hardware backdoor",All,All,General,
+T-PHYS-02,An intruder into the exchange over the Fronthaul cable network attempts to gain electronic access to cause damage or access sensitive data,All except Script kiddies,Physical access to the open Fronthaul cable network,"ASSET-D-01, ASSET-D-02, ASSET-D-04, ASSET-D-05","O-RU, O-DU",General,
+T-RADIO-01,"Disruption through radio jamming, sniffing and spoofing",All except Script kiddies,Weakness of wireless cellular communications,ASSET-D-06,"UE, O-RU, O-DU",General,
+T-RADIO-02,DoS attacks on cognitive radio networks,All except Script kiddies,Weakness of wireless cellular communications,ASSET-D-06,"UE, O-RU, O-DU",General,
+T-AIML-IM-1,Training Data Control,All,"Vulnerabilities in data sources, vulnerabilities in training database","ASSET-D-25, ASSET-D-26, ASSET-D-27, ASSET-D-28","Near-RT RIC, Non-RT RIC, xAPPs, rApps",General,
+T-AIML-IM-2,Testing Data Control,All,"Vulnerabilities in data sources, vulnerabilities in training database","ASSET-D-25, ASSET-D-26, ASSET-D-27, ASSET-D-28","Near-RT RIC, Non-RT RIC, xAPPs, rApps",General,
+T-AIML-IM-3,Label Manipulation,All,"Vulnerabilities in data sources, vulnerabilities in training database","ASSET-D-25, ASSET-D-26, ASSET-D-27, ASSET-D-28","Near-RT RIC, Non-RT RIC, xAPPs, rApps",General,
+T-AIML-IM-4,AI/ML Query Exploitation,All,"Vulnerabilities in data sources, vulnerabilities in training database, vulnerabilities in AI/ML APIs","ASSET-D-26, ASSET-D-27, ASSET-D-28","Near-RT RIC, Non-RT RIC, xAPPs, rApps",General,
+T-AIML-DP-01,Black-box Data Poisoning,All,"Vulnerabilities in data sources, vulnerabilities in training database","ASSET-D-10, ASSET-D-25, 
+ ASSET-D-26, ASSET-C-12,
+ ASSET-C-02, ASSET-C-11","Database holding data from xApp applications and E2 Node, Training or test data sets collected externally or internally, Trained ML model, xApps, rApps, Near-RT-RIC SW, Non-RT-RIC SW",General,
+T-AIML-DP-02,Grey-box Data Poisoning,All,"Vulnerabilities in data sources, vulnerabilities in data transport, vulnerabilities in training database","ASSET-D-10, ASSET-D-25, 
+ ASSET-D-26, ASSET-C-12,
+ ASSET-C-02, ASSET-C-11, ASSET-C-22, ASSET-C-14,
+ ASSET-C-40","Database holding data from xApp applications and E2 Node, Training or test data sets collected externally or internally, Trained ML model, xApps, rApps, Near-RT-RIC SW, Non-RT-RIC SW, O1 interface for streaming data, A1 interface, E2 interface for streaming data",General,
+T-AIML-DP-03,White-box Data Poisoning,All,"Vulnerabilities in data sources, vulnerabilities in training database","ASSET-D-10, ASSET-D-25, 
+ ASSET-D-26, ASSET-C-12,
+ ASSET-C-02, ASSET-C-11, ASSET-C-22, ASSET-C-14,
+ ASSET-C-40","Database holding data from xApp applications and E2 Node, Training or test data sets collected externally or internally, Trained ML model, xApps, rApps, Near-RT-RIC SW, Non-RT-RIC SW, O1 interface for streaming data, A1 interface, E2 interface for streaming data",General,
+T-AIML-MEI-01,Information Access - Membership Inference,All,"Vulnerabilities in data sources, vulnerabilities in training database","ASSET-D-26, 
+ ASSET-C-02, 
+ ASSET-C-11","Trained ML model, xApps, rApps, Near-RT-RIC SW, Non-RT-RIC SW",General,
+T-AIML-MEI-02,Inference Technique - Membership Inference,All,"Vulnerabilities in data sources, vulnerabilities in training database","ASSET-D-26, 
+ ASSET-C-02, 
+ ASSET-C-11","Trained ML model, xApps, rApps, Near-RT-RIC SW, Non-RT-RIC SW",General,
+T-AIML-MEI-03,Target based - Membership Inference,All,"Vulnerabilities in data sources, vulnerabilities in training database","ASSET-D-26, 
+ ASSET-C-02, 
+ ASSET-C-11","Trained ML model, xApps, rApps, Near-RT-RIC SW, Non-RT-RIC SW",General,
+T-AIML-ME-01,Intellectual Property Theft,All,"Vulnerabilities in data sources, vulnerabilities in training database, vulnerabilities in ML model storage, vulnerabilities in ML model transfer","ASSET-D-10, ASSET-D-25, ASSET-D-26, ASSET-C-02, ASSET-C-11","Database holding data from xApp applications and E2, Training or test data sets collected externally or internally, Trained ML model, Near-RT-RIC SW, Non-RT-RIC SW",General,
+T-AIML-ME-02,Data Privacy Violations,All,"Vulnerabilities in data sources, vulnerabilities in training database, vulnerabilities in ML model storage, vulnerabilities in ML model transfer","ASSET-D-10, ASSET-D-25, ASSET-D-26, ASSET-C-02, ASSET-C-11","Database holding data from xApp applications and E2, Training or test data sets collected externally or internally, Trained ML model, Near-RT-RIC SW, Non-RT-RIC SW",General,
+T-AIML-ME-03,Adversarial Attacks with Stolen Models,All,"Vulnerabilities in data sources, vulnerabilities in training database, vulnerabilities in ML model storage, vulnerabilities in ML model transfer","ASSET-D-10, ASSET-D-25, ASSET-D-26, ASSET-C-02, ASSET-C-11","Database holding data from xApp applications and E2, Training or test data sets collected externally or internally, Trained ML model, Near-RT-RIC SW, Non-RT-RIC SW",General,
+T-AIML-MOI-01,Black-box Model Inversion,All,"Model is overfitted, model may have memorized specific training examples, model API not properly protected","ASSET-D-10, ASSET-D-25, ASSET-D-26, ASSET-D-27","Near-RT RIC, Non-RT RIC, xAPPs, rApps",General,
+T-AIML-MOI-02,White-box Model Inversion,All,"Model is not protected, training data is not protected, model is overfitted, model may have memorized specific training examples, model API not protected","ASSET-D-10, ASSET-D-25, ASSET-D-26, ASSET-D-27, ASSET-D-28","Near-RT RIC, Non-RT RIC, xAPPs, rApps",General,
+T-AIML-SC-01,Data Poisoning via Supply Chain,All,"Vulnerabilities in data sources, vulnerabilities in training database, vulnerabilities in ML model transfer","ASSET-D-10, ASSET-D-25, ASSET-D-26, ASSET-C-02, ASSET-C-11, ASSET-C-12","Database holding data from xApp applications and E2 Node, Training or test data sets collected externally or internally, Trained ML model, ML components deploying machine learning (xApps, rApps),Near-RT-RIC SW, Non-RT-RIC SW",General,
+T-AIML-SC-02,Model Tampering,All,Vulnerabilities in ML model transfer,"ASSET-D-10, ASSET-D-25, ASSET-D-26, ASSET-C-02, ASSET-C-11, ASSET-C-12","Database holding data from xApp applications and E2 Node, Training or test data sets collected externally or internally, Trained ML model, ML components deploying machine learning (xApps, rApps),Near-RT-RIC SW, Non-RT-RIC SW",General,
+T-AIML-SC-03,Backdoor via Supply Chain,All,Vulnerabilities in ML model transfer,"ASSET-D-10, ASSET-D-25, ASSET-D-26, ASSET-C-02, ASSET-C-11, ASSET-C-12","Database holding data from xApp applications and E2 Node, Training or test data sets collected externally or internally, Trained ML model, ML components deploying machine learning (xApps, rApps),Near-RT-RIC SW, Non-RT-RIC SW",General,
+T-AIML-SC-04,Hardware Tampering,All,Vulnerabilities in the AI processing HW,"ASSET-D-10, ASSET-D-26, ASSET-C-02, ASSET-C-11, ASSET-C-12","Database holding data from xApp applications and E2 Node, Trained ML model, ML components deploying machine learning (xApps, rApps),Near-RT-RIC SW, Non-RT-RIC SW",General,
+T-AIML-SC-05,Insecure Maintenance APIs,All,Vulnerabilities in the ML maintenance APIs,"ASSET-D-10, ASSET-D-25, ASSET-D-26, ASSET-C-02, ASSET-C-11, ASSET-C-12","Database holding data from xApp applications and E2 Node, Training or test data sets collected externally or internally, Trained ML model, ML components deploying machine learning (xApps, rApps),Near-RT-RIC SW, Non-RT-RIC SW",General,
+T-AIML-SC-06,Third-party Libraries and Dependencies,All,Vulnerabilities in the ML- related SW,"ASSET-D-10, ASSET-D-25, ASSET-D-26, ASSET-C-02, ASSET-C-11, ASSET-C-12","Database holding data from xApp applications and E2 Node, Training or test data sets collected externally or internally, Trained ML model, ML components deploying machine learning (xApps, rApps),Near-RT-RIC SW, Non-RT-RIC SW",General,
+T-AIML-OI-01,Denial of Service Impacting Output Integrity,All,"Vulnerabilities in data sources, vulnerabilities in training database, vulnerabilities in ML model storage, vulnerabilities in ML model transfer","ASSET-D-25,ASSET-D-26, ASSET-D-27, ASSET-D-07,ASSET-C-12,
+ ASSET-C-02, ASSET-C-11","Training or test data sets collected externally or internally, Trained ML model, ML prediction results,A1 policies,E2 node data, Near-RT-RIC SW, Non-RT-RIC SW",General,
+T-AIML-OI-02,Subscriber QoE Change,All,"Vulnerabilities in data sources, vulnerabilities in training database, vulnerabilities in ML model storage, vulnerabilities in ML model transfer.","ASSET-D-25, 
+ ASSET-D-26, ASSET-D-27, ASSET-D-07, ASSET-D-11,ASSET-C-02,
+ ASSET-C-02, ASSET-C-11","Training or test data sets collected externally or internally, Trained ML model ,
+ ML prediction results ,Data transported over the O1 interface,A1 policies,
+ E2 node data, Near-RT-RIC SW, Non-RT-RIC SW .",General,
+T-AIML-MP-01,Model Parameter Poisoning,All,"• Insufficient access controls to the model’s parameters [i.33]
+ • Inadequate monitoring and logging of model’s activity [i.32]
+ • Lack of control for poisoning in model [i.32]
+ • Weak access protection mechanisms for ML model components [i.32]","[ASSET-D-26], [ASSET-C-12], [ASSET-D-27]","Near-RT RIC, Non-RT RIC, O-CU, O-DU, xApps, rApps",General,
+T-AIML-MP-02,Inference Algorithm Poisoning,All,"• Insufficient access controls to the model’s code [i.33]
+ • Inadequate monitoring and logging of model’s activity [i.32]
+ • Lack of code integrity checking
+ • Weak access protection mechanisms for ML model components [i.32]","[ASSET-D-26], [ASSET-D-27]","Near-RT RIC, Non-RT RIC, O-CU, O-DU, xApps, rApps",General,
+T-AIML-MP-03,Learning Algorithm Poisoning,All,"• Insufficient access controls to the model’s code [i.33]
+ • Inadequate monitoring and logging of model’s activity [i.32]
+ • Weak access protection mechanisms for ML model components [i.32]
+ • Lack of code integrity checking",[ASSET-C-12],"Near-RT RIC, Non-RT RIC, xApps, rApps",General,
+T-AIML-MP-04,Model Control,All,"Vulnerabilities in ML model storage, vulnerabilities in ML model transfer","ASSET-D-12, ASSET-D-26, ASSET-D-27, ASSET-D-28","Near-RT RIC, Non-RT RIC, xAPPs, rApps",General,
+T-AIML-MS-01,Data Manipulation for Model Skewing,All,"Vulnerabilities in (i) training data validation, (ii) less robust model training against cyber-attacks, (iii) less model performance monitoring for monitoring of suspicious activity","ASSET-D-26, 
+ ASSET-D-27, 
+ ASSET-D-28","Trained ML model, xApps, rApps, Near-RT-RIC SW, Non-RT-RIC SW",General,
+T-AIML-MS-02,Feedback Manipulation for Model Skewing,All,"Vulnerabilities in (i) less secure feedback mechanisms to prevent manipulation, (ii) less robust model training against cyber-attacks, (iii) less model performance monitoring for monitoring of suspicious activity","ASSET-D-26, 
+ ASSET-D-27, 
+ ASSET-D-28","Trained ML model, xApps, rApps, Near-RT-RIC SW, Non-RT-RIC SW",General,
+T-AIML-TL-01,Data Poisoning for Transfer Learning,All,"Vulnerabilities in data sources, 
+ Vulnerabilities in training database","ASSET-D-10, ASSET-D-25, ASSET-D-26, ASSET-C-02, ASSET-C-11, ASSET-C-12","Database holding data from xApp applications and E2 Node, Training or test data sets collected externally or internally, Trained ML model, ML components deploying machine learning (xApps, rApps),Near-RT-RIC SW, Non-RT-RIC SW",General,
+T-AIML-TL-02,Model Stealing for Transfer Learning,All,"Vulnerabilities in data sources, 
+ Vulnerabilities in training database, 
+ Vulnerabilities in ML model storage, 
+ Vulnerabilities in ML model transfer","ASSET-D-10, ASSET-D-25, ASSET-D-26, ASSET-C-02, ASSET-C-11, ASSET-C-12","Database holding data from xApp applications and E2 Node, Training or test data sets collected externally or internally, Trained ML model, ML components deploying machine learning (xApps, rApps),Near-RT-RIC SW, Non-RT-RIC SW",General,
+T-AIML-TL-03,Adversarial Examples,All,"Vulnerabilities in data sources, 
+ Vulnerabilities in training database, 
+ Vulnerabilities in ML model storage, Vulnerabilities in ML model transfer","ASSET-D-10, ASSET-D-25, ASSET-D-26, ASSET-C-02, ASSET-C-11","Database holding data from xApp applications and E2 Node, Training or test data sets collected externally or internally, Trained ML model, Near-RT-RIC SW, Non-RT-RIC SW",General,
+T-AIML-TL-04,Backdoor for Tranfer Learning,All,Vulnerabilities in ML model transfer,"ASSET-D-10, ASSET-D-25, ASSET-D-26, ASSET-C-02, ASSET-C-11, ASSET-C-12","Database holding data from xApp applications and E2 Node, Training or test data sets collected externally or internally, Trained ML model, ML components deploying machine learning (xApps, rApps),Near-RT-RIC SW, Non-RT-RIC SW",General,
+T-AIML-EL-01,Model Extraction,All,Vulnerabilities in data sources,"ASSET-D-10, ASSET-D-26, ASSET-C-02, ASSET-C-11, ASSET-C-29, ASSET-30","Database holding data from xApp applications and E2 Node, Trained ML model, Near-RT-RIC SW, Non-RT-RIC SW, AAL software, Hardware accelerator device firmware",General,
+T-AIML-EL-02,Data Inference,All,Vulnerabilities in data sources,"ASSET-D-10, ASSET-C-02, ASSET-C-11, ASSET-C-29, ASSET-30","Database holding data from xApp applications and E2 Node, Near-RT-RIC SW, Non-RT-RIC SW, AAL software, Hardware accelerator device firmware",General,
+T-AIML-EL-03,Denial of Service via Side Channels,All,Vulnerabilities in data sources,"ASSET-D-10, ASSET-D-26, ASSET-C-02, ASSET-C-11, ASSET-C-29, ASSET-30","Database holding data from xApp applications and E2 Node, Trained ML model, Near-RT-RIC SW, Non-RT-RIC SW, AAL software, Hardware accelerator device firmware",General,
+T-AIML-EV-01,Grey-box based Data Evasion,All,"Vulnerabilities in the input APIs of the AI ML model application
+ Vulnerabilities in the source of input data used by AI ML for inferences","ASSET-D-10, ASSET-D-25, ASSET-D-26, ASSET-C-02, ASSET-C-11","Database holding data from xApp applications and E2 Node, Training or test data sets collected externally or internally, Trained ML model, Near-RT-RIC SW, Non-RT-RIC",General,
+T-E2-01,Untrusted Near-RT-RIC and E2 Nodes,All,weak mutual authentication,ASSET-C-40,E2 interface,General,
+T-E2-02,Malicious actor monitors messaging across E2 interface,All,Missing or weak confidentiality protection,ASSET-C-40,E2 interface,General,
+T-E3-03,Malicious actor modifies messaging across E2 interface,All,Lack of integrity verification,ASSET-C-40,E2 interface,General,
+T-Y1-01,Untrusted Near-RT-RIC and Y1 consumers,All,weak mutual authentication,ASSET-C-42,Y1interface,General,
+T-Y1-02,Malicious actor monitors messaging across Y1 interface,All,Missing or weak confidentiality protection,ASSET-C-42,Y1 interface,General,
+T-Y1-03,Malicious actor modifies messaging across Y1 interface,All,Lack of integrity verification,ASSET-C-42,Y1 interface,General,

@@ -1,0 +1,16 @@
+openai>=1.0.0
+pypdf>=4.2
+pdfminer.six>=20221105
+jsonschema>=4.22
+pandas>=2.2
+neo4j-driver
+neo4j
+pandas
+pypdf
+nltk
+fastmcp
+openai
+fastapi
+pydantic
+pytest
+pytest-asyncio
